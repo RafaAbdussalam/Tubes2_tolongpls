@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"little_alchemy_backend/internal/model"
 	"little_alchemy_backend/internal/repo"
+	"little_alchemy_backend/internal/tree"
 	"log"
 )
 
@@ -12,14 +14,16 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Get all recipes for "Fire"
-	recipes, err := repo.GetRecipes("Bucket")
+	builder, err := tree.NewBuilder(repo, model.BFS, 1)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	for i, r := range recipes {
-		fmt.Print(i+1 , ". ")
-		r.PrintR()
+	tree, err := builder.BuildTree("Mud")
+	if err != nil {
+		log.Fatal(err)
 	}
+
+	fmt.Print(tree.String())
+
 }

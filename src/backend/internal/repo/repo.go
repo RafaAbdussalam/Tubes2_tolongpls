@@ -56,7 +56,7 @@ func NewRepository(dbPath, csvPath string) (*RecipeRepository, error) {
 
 }
 
-func (repo *RecipeRepository) GetRecipes(element string) ([]*model.Recipe, error) {
+func (repo *RecipeRepository) GetRecipesFor(element string) ([]*model.Recipe, error) {
 	switch repo.mode {
 		case "db":
 			return repo.getFromDB(element)
