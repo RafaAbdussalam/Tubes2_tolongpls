@@ -1,0 +1,18 @@
+# Backend (Go)
+backend/go.sum
+backend/data/alchemy.db  # Exclude local DB
+backend/.env
+
+# Frontend (React)
+frontend/node_modules/
+frontend/.env
+frontend/.eslintcache
+frontend/build/
+frontend/coverage/
+
+# Umum
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
