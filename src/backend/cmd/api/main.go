@@ -9,21 +9,22 @@ import (
 )
 
 func main() {
-	repo, err := repo.NewRepository("data/alchemy.db", "data/alchemy.csv")
+	// Initialize dependencies
+	repo, err := repo.NewRepository("data/alchemy.db", "data/alchemy.csv") 
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("shi not workin")
 	}
 
-	builder, err := tree.NewBuilder(repo, model.BFS, 1)
+	builder, err := tree.NewBuilder(repo, model.BFS, 5)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("shi not workin")
 	}
 
-	tree, err := builder.BuildTree("Mud")
+	tree, err := builder.BuildTree("Pressure", 3)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("shi not workin")
 	}
 
-	fmt.Print(tree.String())
+	fmt.Println(tree.String())
 
 }

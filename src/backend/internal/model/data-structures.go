@@ -26,29 +26,11 @@ func NewQueue[T any](initial ...T) *Queue[T] {
 	return &q
 }
 
-// Stack
-type Stack []interface{}
-
-func (s *Stack) Push(x interface{}) {
-	*s = append(*s, x)
-}
-
-func (s *Stack) Pop() interface{} {
-	tempS := *s 
-	len := len(tempS) 
-	last := tempS[len-1] 
-	*s = tempS[:len-1] 
-	return last
-}
-
-func (s *Stack) Peek() interface{} {
-	return (*s)[0]
-}
-
-func (s *Stack) IsEmpty() bool {
-	return len(*s) == 0
-}
-
-func NewStack(initial ...interface{}) *Stack {
-	return &Stack{initial}
+// Boolean to Integer
+func boolToInt(b bool) int {
+	var i int
+	if b {
+		i = 1
+	}
+	return i
 }

@@ -9,7 +9,7 @@ type DFSBuilder struct {
    repo repo.RecipeRepository
 }
 
-func (b *DFSBuilder) BuildTree(rootElement string) (*model.RecipeTree, error) {
+func (b *DFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTree, error) {
 	
 	return nil, nil
 	

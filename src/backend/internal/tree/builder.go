@@ -7,10 +7,10 @@ import (
 )
 
 type TreeBuilder interface {
-	BuildTree(rootElement string) (*model.RecipeTree, error)
+	BuildTree(rootElement string, amount int) (*model.RecipeTree, error)
 }
 
-func NewBuilder(repo *repo.RecipeRepository, traversal model.Traversal, amount int) (TreeBuilder, error) {
+func NewBuilder(repo *repo.RecipeRepository, traversal model.Traversal, amount uint8) (TreeBuilder, error) {
 	switch traversal {
 		case model.BFS:
 			return &BFSBuilder{repo: *repo}, nil
