@@ -1,0 +1,15 @@
+.reset-button {
+    padding: 10px 20px;
+    background-color: indianred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.5s;
+}
+
+.reset-button:hover {
+    background-color: firebrick;
+}
