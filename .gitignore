@@ -16,3 +16,6 @@ frontend/coverage/
 .vscode/
 *.log
 *.tmp
+
+# Environment
+.env
