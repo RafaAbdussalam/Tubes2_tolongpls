@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import SearchBar from '../components/SearchBar/SearchBar';
-import AlgorithmToggle from '../components/AlgorithmToggle/AlgorithmToggle';
-import ModeToggle from '../components/ModeToggle/ModeToggle';
-import MaxPathsInput from '../components/MaxPathsInput/MaxPathsInput';
-import SearchControls from '../components/SearchControls/SearchControls';
+import SearchBar from '../components/Search/SearchBar/SearchBar';
+import AlgorithmToggle from '../components/Search/AlgorithmToggle/AlgorithmToggle';
+import ModeToggle from '../components/Search/ModeToggle/ModeToggle';
+import MaxPathsInput from '../components/Search/MaxPathsInput/MaxPathsInput';
+import SearchControls from '../components/Search/SearchControls';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
