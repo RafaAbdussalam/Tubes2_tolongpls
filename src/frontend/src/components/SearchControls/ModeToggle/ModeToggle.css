@@ -6,21 +6,21 @@
 }
 
 .toggle-button {
-    padding: 8px 16px;
-    background-color: #f1f1f1;
-    border: 2px solid #ddd;
-    border-radius: 4px;
+    padding: 10px 15px; 
+    background-color: lightgray; 
+    border: 2px solid silver; 
+    border-radius: 5px; 
     cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s;
+    font-size: 15px; 
+    transition: all 0.5s;
 }
 
 .toggle-button.active {
-    background-color: #2196F3;
+    background-color: dodgerblue; 
     color: white;
-    border-color: #2196F3;
+    border-color: dodgerblue; 
 }
 
 .toggle-button:hover:not(.active) {
-    background-color: #ddd;
+    background-color: gray; 
 }

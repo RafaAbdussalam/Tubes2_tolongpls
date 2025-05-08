@@ -21,3 +21,7 @@ run-frontend:
 # Jalankan scraper
 scrape-data:
 	cd src/backend && go run cmd/scraper/main.go
+
+# Print struktur direktori
+tree:
+	tree -F --prune -I node_modules .

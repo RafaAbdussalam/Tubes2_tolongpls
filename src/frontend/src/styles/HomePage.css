@@ -1,11 +1,12 @@
 .home-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
 }
-  
+
 h1 {
-  color: #333;
-  margin-bottom: 30px;
+    color: darkslateblue; 
+    margin-bottom: 30px;
 }
