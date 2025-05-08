@@ -3,6 +3,7 @@ package tree
 import (
 	"little_alchemy_backend/internal/model"
 	"little_alchemy_backend/internal/repo"
+	"time"
 )
 
 type BFSBuilder struct {
@@ -11,6 +12,7 @@ type BFSBuilder struct {
 
 func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTree, error) {
 	
+	start := time.Now()
 	tree := model.NewTree(rootElement, model.BFS) // Start tree
 	queue := model.NewQueue(tree.Root) // Add root to queue
 	
@@ -57,6 +59,9 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 
 			// Stop if found enough recipes
 			if tree.Root.RecipeCount == amount {
+				model.PruneTree(tree.Root)
+				elapsed := time.Since(start)
+				tree.Time = int(elapsed)
 				return tree, nil
 			}
 
@@ -65,6 +70,11 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 		}
 	}
 
+	// Furbish tree
+	model.PruneTree(tree.Root)
+	elapsed := time.Since(start)
+	tree.Time = int(elapsed)
+
 	return tree, nil
 	
-}
+}	
