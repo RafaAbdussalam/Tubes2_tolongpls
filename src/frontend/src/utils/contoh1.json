@@ -1,0 +1,108 @@
+{
+    "algorithm": "bfs",
+    "depth": 4,
+    "node_count": 1771,
+    "time": 0,
+    "recipe_count": 15,
+    "tree_data": {
+        "element": "Brick",
+        "children": [
+            {
+                "item_1": {
+                    "element": "Mud",
+                    "children": [
+                        {
+                            "item_1": {
+                                "element": "Water",
+                                "children": []
+                            },
+                            "item_2": {
+                                "element": "Earth",
+                                "children": []
+                            }
+                        }
+                    ]
+                },
+                "item_2": {
+                    "element": "Fire",
+                    "children": []
+                }
+            },
+            {
+                "item_1": {
+                    "element": "Clay",
+                    "children": [
+                        {
+                            "item_1": {
+                                "element": "Mud",
+                                "children": [
+                                    {
+                                        "item_1": {
+                                            "element": "Water",
+                                            "children": []
+                                        },
+                                        "item_2": {
+                                            "element": "Earth",
+                                            "children": []
+                                        }
+                                    }
+                                ]
+                            },
+                            "item_2": {
+                                "element": "Stone",
+                                "children": [
+                                    {
+                                        "item_1": {
+                                            "element": "Earth",
+                                            "children": []
+                                        },
+                                        "item_2": {
+                                            "element": "Pressure",
+                                            "children": [
+                                                {
+                                                    "item_1": {
+                                                        "element": "Air",
+                                                        "children": []
+                                                    },
+                                                    "item_2": {
+                                                        "element": "Air",
+                                                        "children": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "item_1": {
+                                            "element": "Air",
+                                            "children": []
+                                        },
+                                        "item_2": {
+                                            "element": "Lava",
+                                            "children": [
+                                                {
+                                                    "item_1": {
+                                                        "element": "Earth",
+                                                        "children": []
+                                                    },
+                                                    "item_2": {
+                                                        "element": "Fire",
+                                                        "children": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "item_2": {
+                    "element": "Fire",
+                    "children": []
+                }
+            }
+        ]
+    }
+}
