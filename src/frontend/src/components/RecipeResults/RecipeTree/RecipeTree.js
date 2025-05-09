@@ -4,7 +4,7 @@ import { formatTree } from '../../../utils/formatTree';
 import './RecipeTree.css';
 
 // Render custom
-function renderCustomNode({ nodeDatum, toggleNode }) {
+function renderCustomNode({ nodeDatum }) {
     const isRecipe = nodeDatum.attributes?.type === 'recipe';
     const isBase = nodeDatum.attributes?.type === 'base-element';
 
@@ -20,8 +20,7 @@ function renderCustomNode({ nodeDatum, toggleNode }) {
                 x={isRecipe ? 25 : 20}
                 dy={isRecipe ? '.31em' : '.35em'}
                 fill={isRecipe ? 'navy' : 'black'}
-                fontSize={isRecipe ? '11px' : '12px'}
-                fontStyle={isRecipe ? 'italic' : 'normal'}
+                fontSize={isRecipe ? '20px' : '20px'}
             >
                 {nodeDatum.name}
             </text>

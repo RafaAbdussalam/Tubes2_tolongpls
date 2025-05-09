@@ -10,9 +10,9 @@
 
 .stats-panel h3 {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     color: darkslategray;
-    font-size: 16px;
+    font-size: 17px;
     border-bottom: 1px solid lightgray;
     padding-bottom: 6px;
 }
@@ -28,16 +28,17 @@
 }
 
 .stats-table tr:not(:last-child) {
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
 }
 
 .stats-table td {
-    padding: 6px 0;
-    vertical-align: top;
+    padding:10px 10px;
+    vertical-align: center;
 }
 
 .stat-label {
     font-weight: bold;
+    text-align: right;
     color: dimgray;
     white-space: nowrap;
     padding-right: 10px;
@@ -46,7 +47,7 @@
 .stat-value {
     color: black;
     font-family: monospace;
-    text-align: right;
+    text-align: left;
 }
 
 @media (max-width: 600px) {

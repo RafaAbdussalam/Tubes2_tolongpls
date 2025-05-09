@@ -5,8 +5,8 @@ import { fetchRecipe } from '../utils/api';
 import '../styles/HomePage.css';
 
 // untuk uji coba tanpa API
-// import data1 from '../utils/contoh1.json';
-// import data2 from '../utils/contoh2.json';
+import data1 from '../utils/contoh1.json';
+import data2 from '../utils/contoh2.json';
 
 function HomePage() {
     // State management
@@ -19,35 +19,35 @@ function HomePage() {
     
     // Handlers
     // ini siap dicoba sama API
-    function handleSearchSubmit(e) {
-        e.preventDefault();
-        if (!searchTerm.trim()) return;
-        
-        setIsLoading(true);
-        fetchRecipe({
-                element: searchTerm,
-                algorithm,
-                mode,
-                maxPaths: mode === 'multiple' ? maxPaths : undefined
-        })
-            .then(setResults)
-            .catch(console.error)
-            .finally(() => setIsLoading(false));
-    };
-    
-    // dummy data
     // function handleSearchSubmit(e) {
     //     e.preventDefault();
     //     if (!searchTerm.trim()) return;
         
     //     setIsLoading(true);
-    //     if (searchTerm.length % 2 === 1) {
-    //         setResults(data1);
-    //     } else {
-    //         setResults(data2);
-    //     }
-    //     setIsLoading(false);
-    // }
+    //     fetchRecipe({
+    //             element: searchTerm,
+    //             algorithm,
+    //             mode,
+    //             maxPaths: mode === 'multiple' ? maxPaths : undefined
+    //     })
+    //         .then(setResults)
+    //         .catch(console.error)
+    //         .finally(() => setIsLoading(false));
+    // };
+    
+    // dummy data
+    function handleSearchSubmit(e) {
+        e.preventDefault();
+        if (!searchTerm.trim()) return;
+        
+        setIsLoading(true);
+        if (searchTerm.length % 2 === 1) {
+            setResults(data1);
+        } else {
+            setResults(data2);
+        }
+        setIsLoading(false);
+    }
     
     function handleReset() {
         setResults(null);

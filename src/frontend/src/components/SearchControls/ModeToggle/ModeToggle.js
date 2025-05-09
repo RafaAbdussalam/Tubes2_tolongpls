@@ -5,16 +5,16 @@ function ModeToggle({ mode, onChange }) {
     return (
         <div className="mode-toggle">
             <button
-                className={`toggle-button ${mode === 'shortest' ? 'active' : ''}`}
-                onClick={() => onChange('shortest')}
+                className={`toggle-button ${mode === 'single' ? 'active' : ''}`}
+                onClick={() => onChange('single')}
             >
-                Shortest Path
+                Single Path
             </button>
             <button
                 className={`toggle-button ${mode === 'multiple' ? 'active' : ''}`}
                 onClick={() => onChange('multiple')}
             >
-                Multiple Paths
+                Multi Paths
             </button>
         </div>
     );
