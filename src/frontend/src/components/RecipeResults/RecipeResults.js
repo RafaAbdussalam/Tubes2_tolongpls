@@ -4,16 +4,23 @@ import RecipeTree from './RecipeTree/RecipeTree';
 import ResetButton from './ResetButton/ResetButton';
 import './RecipeResults.css';
 
-function RecipeResults({ results, onReset }) {
+function RecipeResults({ results, mode, onReset }) {
     if (!results) return null;
 
     return (
     <div className="recipe-results">
         <div className="results-header">
-            <StatsPanel stats={results} />
-            <ResetButton onClick={onReset} />
+            <StatsPanel 
+                stats={results} 
+                mode={mode}
+            />
+            <ResetButton 
+                onClick={onReset} 
+            />
         </div>
-        <RecipeTree data={results.tree_data} />
+        <RecipeTree 
+            data={results.tree_data} 
+        />
     </div>
     );
 };

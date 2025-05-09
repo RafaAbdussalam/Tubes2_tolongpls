@@ -10,6 +10,7 @@ import (
 	"little_alchemy_backend/internal/repo"
 	"little_alchemy_backend/internal/tree"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,6 +18,15 @@ func NewRouter(repo *repo.RecipeRepository) *gin.Engine {
 
 	// Create router
 	router := gin.Default()
+
+	// CORS
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"http://localhost:3000"},
+		AllowMethods:     []string{"GET", "OPTIONS"},
+		AllowHeaders:     []string{"Content-Type"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+	}))
 
 	router.GET("/api/tree", func(context *gin.Context) {
 
@@ -49,8 +59,11 @@ func NewRouter(repo *repo.RecipeRepository) *gin.Engine {
 		recipeTree, err := builder.BuildTree(element, amount)
 		if err != nil {
 			context.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return 
+			return
 		}
+
+		// Set Recipe Count
+		model.SetRecipeCount(recipeTree)
 
 		// Send tree
 		fmt.Println(recipeTree.String())

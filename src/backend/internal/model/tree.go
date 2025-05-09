@@ -7,11 +7,12 @@ import (
 
 // Tree
 type RecipeTree struct {
-	Mode      	Traversal    	`json:"algorithm"`
-	Depth     	int          	`json:"depth"`
-	NodeCount 	int        		`json:"node_count"`
-	Time 			int 				`json:"time"`
-	Root      	*ElementNode 	`json:"tree_data"`
+	Mode        Traversal    `json:"algorithm"`
+	Depth       int          `json:"depth"`
+	NodeCount   int          `json:"node_count"`
+	RecipeCount int          `json:"recipe_count"`
+	Time        int          `json:"time"`
+	Root        *ElementNode `json:"tree_data"`
 }
 
 func NewTree(rootElement string, mode Traversal) *RecipeTree {
@@ -23,7 +24,12 @@ func NewTree(rootElement string, mode Traversal) *RecipeTree {
 	}
 }
 
-// Update recipe count 
+// Set RecipeCount in RecipeTree
+func SetRecipeCount(recipeTree *RecipeTree) {
+	recipeTree.RecipeCount = recipeTree.Root.RecipeCount
+}
+
+// Update recipe count
 func BubbleCount(elementNode *ElementNode, recipeNode *RecipeNode) {
 	if elementNode == nil && recipeNode == nil {
 		return
@@ -75,7 +81,7 @@ const (
 func (t *RecipeTree) String() string {
 	var sb strings.Builder
 	t.printNode(&sb, t.Root, 0)
-	sb.WriteString(fmt.Sprintf("\nTree (Mode: %s, Depth: %d, Nodes: %d, Recipes: %v, Time: %v)\n\n", t.Mode, t.Depth, t.NodeCount, t.Root.RecipeCount, t.Time))
+	sb.WriteString(fmt.Sprintf("\nTree (Mode: %s, Depth: %d, Nodes: %d, Recipes: %v, Time: %v)\n\n", t.Mode, t.Depth, t.NodeCount, t.RecipeCount, t.Time))
 	return sb.String()
 }
 

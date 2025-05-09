@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchBar.css';
 
-const SearchBar = ({ value, onChange, onSubmit }) => {
+function SearchBar({ value, onChange, onSubmit }) {
     function handleSubmit(e) {
         e.preventDefault();  // Prevent default form submission
         onSubmit(e);         // Teruskan event ke parent

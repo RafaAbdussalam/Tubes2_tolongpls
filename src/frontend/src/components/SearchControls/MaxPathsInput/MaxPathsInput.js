@@ -8,8 +8,8 @@ function MaxPathsInput({ value, onChange }) {
             <input
                 type="number"
                 id="maxPaths"
-                min="1"
-                max="20"
+                min="2"
+                max="100"
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
             />

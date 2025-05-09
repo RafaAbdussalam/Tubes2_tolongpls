@@ -1,7 +1,7 @@
 import React from 'react';
 import './StatsPanel.css';
 
-function StatsPanel({ stats }) {
+function StatsPanel({ stats, mode }) {
     return (
         <div className="stats-panel">
             <h3>Search Statistics</h3>
@@ -28,7 +28,7 @@ function StatsPanel({ stats }) {
                         <tr>
                             <td className="stat-label">Mode :</td>
                             <td className="stat-value">
-                            {stats.mode === 'shortest' ? 'Shortest Path' : 'Multiple Paths'}
+                            {mode === 'single' ? 'Single Path' : 'Multiple Paths'}
                             </td>
                         </tr>
                         <tr>

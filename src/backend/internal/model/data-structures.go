@@ -1,7 +1,7 @@
 package model
 
 // Queue
-type Queue [T any] []T
+type Queue[T any] []T
 
 func (q *Queue[T]) Push(x T) {
 	*q = append(*q, x)

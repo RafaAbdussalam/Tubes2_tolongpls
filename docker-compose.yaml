@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   backend:
-    build: ./backend
+    build: ./src/backend
     ports:
       - "8080:8080"
     volumes:
@@ -9,9 +9,11 @@ services:
     restart: unless-stopped
 
   frontend:
-    build: ./frontend
+    build: ./src/frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
+    # environment:
+    #   - API_URL=http:
     restart: unless-stopped

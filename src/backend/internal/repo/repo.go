@@ -13,19 +13,19 @@ import (
 )
 
 type RecipeRepository struct {
-	db      	*sql.DB 
-	csvPath 	string 
-	mode   	string 
+	db      *sql.DB
+	csvPath string
+	mode    string
 }
 
 func NewRepository(dbPath, csvPath string) (*RecipeRepository, error) {
-	
-	// Mencoba database SQLite 
+
+	// Mencoba database SQLite
 	if _, err := os.Stat(dbPath); err == nil {
 		db, err := sql.Open("sqlite", dbPath)
 		if err == nil {
 			if err = db.Ping(); err == nil {
-				log.Println("Menggunakan database SQLite") 
+				log.Println("Menggunakan database SQLite")
 				return &RecipeRepository{
 					db:   db,
 					mode: "db",
@@ -58,12 +58,12 @@ func NewRepository(dbPath, csvPath string) (*RecipeRepository, error) {
 
 func (repo *RecipeRepository) GetRecipesFor(element string) ([]*model.Recipe, error) {
 	switch repo.mode {
-		case "db":
-			return repo.getFromDB(element)
-		case "csv":
-			return repo.getFromCSV(element)
-		default:
-			return nil, fmt.Errorf("mode tidak ada: %s", repo.mode)
+	case "db":
+		return repo.getFromDB(element)
+	case "csv":
+		return repo.getFromCSV(element)
+	default:
+		return nil, fmt.Errorf("mode tidak ada: %s", repo.mode)
 	}
 }
 
@@ -73,8 +73,8 @@ func (repo *RecipeRepository) getFromDB(element string) ([]*model.Recipe, error)
 	rows, err := repo.db.Query(`
 		SELECT element, item1, item2 
 		FROM elements 
-		WHERE element = ?`, 
-	element)
+		WHERE element = ?`,
+		element)
 	if err != nil {
 		return nil, err
 	}
@@ -87,11 +87,11 @@ func (repo *RecipeRepository) getFromDB(element string) ([]*model.Recipe, error)
 		if err := rows.Scan(&element, &item1, &item2); err != nil {
 			return nil, err
 		}
-		recipes = append(recipes, model.NewRecipe(element, item1, item2)) 
+		recipes = append(recipes, model.NewRecipe(element, item1, item2))
 	}
 	if err := rows.Err(); err != nil {
 		return nil, err
-  	}
+	}
 
 	return recipes, nil
 }
@@ -113,13 +113,13 @@ func (repo *RecipeRepository) getFromCSV(element string) ([]*model.Recipe, error
 	}
 
 	// Cari dan simpan baris dengan recipe elemen dalam slice
-	var recipes []*model.Recipe 
+	var recipes []*model.Recipe
 	for i, record := range records {
 		if i == 0 {
-			continue 
-	  	}
+			continue
+		}
 		if len(record) == 3 && strings.EqualFold(record[0], element) {
-			recipes = append(recipes, model.NewRecipe(record[0], record[1], record[2])) 
+			recipes = append(recipes, model.NewRecipe(record[0], record[1], record[2]))
 		}
 	}
 
