@@ -1,41 +1,44 @@
 import React from 'react';
 import { Tree } from 'react-d3-tree';
+import { formatTree } from '../../../utils/formatTree';
 import './RecipeTree.css';
+
+// Render custom
+function renderCustomNode({ nodeDatum, toggleNode }) {
+    const isRecipe = nodeDatum.attributes?.type === 'recipe';
+    const isBase = nodeDatum.attributes?.type === 'base-element';
+
+    return (
+        <g>
+            <circle
+                r="10"
+                fill={isRecipe ? 'lightblue' : isBase ? 'lightgreen' : 'white'}
+                stroke={isRecipe ? 'steelblue' : 'darkgreen'}
+                strokeWidth="2"
+            />
+            <text
+                x={isRecipe ? 25 : 20}
+                dy={isRecipe ? '.31em' : '.35em'}
+                fill={isRecipe ? 'navy' : 'black'}
+                fontSize={isRecipe ? '11px' : '12px'}
+                fontStyle={isRecipe ? 'italic' : 'normal'}
+            >
+                {nodeDatum.name}
+            </text>
+        </g>
+    );
+};
 
 function RecipeTree({ data }) {
     return (
         <div className="recipe-tree-container">
             <Tree
-                data={data}
+                data={formatTree(data)}
                 orientation="vertical"
                 pathFunc="step"
-                collapsible={false}
-                nodeSvgShape={{ shape: 'circle', shapeProps: { r: 10 } }}
-                translate={{ x: 300, y: 50 }}
-                styles={{
-                    nodes: {
-                        node: {
-                            circle: {
-                                fill: 'steelblue',
-                                stroke: 'darkblue',
-                            },
-                            name: {
-                                fill: 'black',
-                                fontSize: '10px',
-                            },
-                        },
-                        leafNode: {
-                            circle: {
-                                fill: 'darkgreen',
-                                stroke: 'forestgreen',
-                            },
-                        },
-                    },
-                    links: {
-                        stroke: 'slategray',
-                        strokeWidth: 2,
-                    },
-                }}
+                translate={{ x: 200, y: 50 }}
+                renderCustomNodeElement={renderCustomNode}
+                className="recipe-tree"
             />
         </div>
     );

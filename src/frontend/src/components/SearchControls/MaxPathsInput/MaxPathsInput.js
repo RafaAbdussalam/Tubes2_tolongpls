@@ -1,7 +1,7 @@
 import React from 'react';
 import './MaxPathsInput.css';
 
-function MaxPathsInput({ maxPaths, onMaxPathsChange }) {
+function MaxPathsInput({ value, onChange }) {
     return (
         <div className="max-paths-input">
             <label htmlFor="maxPaths">Max Paths:</label>
@@ -10,8 +10,8 @@ function MaxPathsInput({ maxPaths, onMaxPathsChange }) {
                 id="maxPaths"
                 min="1"
                 max="20"
-                value={maxPaths}
-                onChange={(e) => onMaxPathsChange(e.target.value)}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
             />
         </div>
     );

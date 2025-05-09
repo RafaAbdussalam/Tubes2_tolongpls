@@ -23,5 +23,5 @@ scrape-data:
 	cd src/backend && go run cmd/scraper/main.go
 
 # Print struktur direktori
-tree:
+directoy-tree:
 	tree -F --prune -I node_modules .

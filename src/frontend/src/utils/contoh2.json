@@ -1,0 +1,76 @@
+{
+  "algorithm": "dfs",
+  "depth": 5,
+  "node_count": 255,
+  "time": 1.2,
+  "recipe_count": 10,
+  "tree_data": {
+    "element": "Plant",
+    "children": [
+      {
+        "item_1": {
+          "element": "Seed",
+          "children": [
+            {
+              "item_1": {
+                "element": "Water",
+                "children": []
+              },
+              "item_2": {
+                "element": "Soil",
+                "children": []
+              }
+            }
+          ]
+        },
+        "item_2": {
+          "element": "Sunlight",
+          "children": []
+        }
+      },
+      {
+        "item_1": {
+          "element": "Flower",
+          "children": [
+            {
+              "item_1": {
+                "element": "Plant",
+                "children": [
+                  {
+                    "item_1": {
+                      "element": "Seed",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Water",
+                            "children": []
+                          },
+                          "item_2": {
+                            "element": "Soil",
+                            "children": []
+                          }
+                        }
+                      ]
+                    },
+                    "item_2": {
+                      "element": "Sunlight",
+                      "children": []
+                    }
+                  }
+                ]
+              },
+              "item_2": {
+                "element": "Time",
+                "children": []
+              }
+            }
+          ]
+        },
+        "item_2": {
+          "element": "Bee",
+          "children": []
+        }
+      }
+    ]
+  }
+}

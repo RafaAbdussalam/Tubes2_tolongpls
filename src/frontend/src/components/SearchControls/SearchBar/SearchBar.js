@@ -1,29 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SearchBar.css';
 
-function SearchBar({ onSubmit }) {
-    const [searchTerm, setSearchTerm] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (searchTerm.trim()) {
-            onSubmit(searchTerm);
-        }
+const SearchBar = ({ value, onChange, onSubmit }) => {
+    function handleSubmit(e) {
+        e.preventDefault();  // Prevent default form submission
+        onSubmit(e);         // Teruskan event ke parent
     };
 
     return (
-        <form className="search-bar" onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Cari elemen (contoh: Brick, Water)..."
-                className="search-input"
-            />
-            <button type="submit" className="search-button">
-                Search
-            </button>
-        </form>
+    <form className="search-bar" onSubmit={handleSubmit}>  {/* Gunakan handler lokal */}
+        <input
+            type="text"
+            value={value}
+            onChange={onChange}
+            placeholder="Search element (e.g. Brick, Water)..."
+            className="search-input"
+        />
+        <button type="submit" className="search-button">
+            Search
+        </button>
+    </form>
     );
 };
 

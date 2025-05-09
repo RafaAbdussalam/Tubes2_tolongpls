@@ -5,27 +5,42 @@ function StatsPanel({ stats }) {
     return (
         <div className="stats-panel">
             <h3>Search Statistics</h3>
-            <div className="stats-grid">
-                <div className="stat-item">
-                    <span className="stat-label">Algorithm:</span>
-                    <span className="stat-value">{stats.algorithm}</span>
-                </div>
-                <div className="stat-item">
-                    <span className="stat-label">Mode:</span>
-                    <span className="stat-value">{stats.mode}</span>
-                </div>
-                <div className="stat-item">
-                    <span className="stat-label">Time:</span>
-                    <span className="stat-value">{stats.time} ms</span>
-                </div>
-                <div className="stat-item">
-                    <span className="stat-label">Nodes Visited:</span>
-                    <span className="stat-value">{stats.nodes}</span>
-                </div>
-                <div className="stat-item">
-                    <span className="stat-label">Recipe Count:</span>
-                    <span className="stat-value">{stats.recipeCount || 1}</span>
-                </div>
+            <div className="stats-tables">
+                <table className="stats-table">
+                    <tbody>
+                        <tr>
+                            <td className="stat-label">Algorithm:</td>
+                            <td className="stat-value">{stats.algorithm.toUpperCase()}</td>
+                        </tr>
+                        <tr>
+                            <td className="stat-label">Depth:</td>
+                            <td className="stat-value">{stats.depth}</td>
+                        </tr>
+                        <tr>
+                            <td className="stat-label">Nodes:</td>
+                            <td className="stat-value">{stats.node_count}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table className="stats-table">
+                    <tbody>
+                        <tr>
+                            <td className="stat-label">Mode:</td>
+                            <td className="stat-value">
+                            {stats.mode === 'shortest' ? 'Shortest Path' : 'Multiple Paths'}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="stat-label">Recipes:</td>
+                            <td className="stat-value">{stats.recipe_count}</td>
+                        </tr>
+                        <tr>
+                            <td className="stat-label">Time:</td>
+                            <td className="stat-value">{stats.time} ms</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     );

@@ -8,23 +8,13 @@ function RecipeResults({ results, onReset }) {
     if (!results) return null;
 
     return (
-        <div className="recipe-results">
-            <StatsPanel 
-                stats={{
-                    algorithm: results.algorithm,
-                    mode: results.mode,
-                    time: results.time,
-                    nodes: results.nodes,
-                    recipeCount: results.recipeCount
-                }} 
-            />
-            <RecipeTree 
-                data={results.treeData} 
-            />
-            <ResetButton 
-                onClick={onReset} 
-            />
+    <div className="recipe-results">
+        <div className="results-header">
+            <StatsPanel stats={results} />
+            <ResetButton onClick={onReset} />
         </div>
+        <RecipeTree data={results.tree_data} />
+    </div>
     );
 };
 
