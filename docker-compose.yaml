@@ -1,19 +1,33 @@
 version: '3.8'
+
 services:
+  
+  # Service tambahan untuk development
+  scraper:
+    build: ./src/backend
+    command: /app/scraper
+    volumes:
+      - ./src/backend/data:/app/data
+  
+  # Backend service
   backend:
     build: ./src/backend
+    command: /app/api
     ports:
       - "8080:8080"
     volumes:
-      - ./backend/data:/app/data  # Mount data folder
+      - ./src/backend/data:/app/data
+    environment:
+      - GIN_MODE=release
     restart: unless-stopped
-
+  
+  # Frontend service
   frontend:
     build: ./src/frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
-    # environment:
-    #   - API_URL=http:
+    environment:
+      - REACT_APP_API_URL=http://backend:8080
     restart: unless-stopped

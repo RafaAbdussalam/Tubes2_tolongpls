@@ -22,8 +22,8 @@ func NewRouter(repo *repo.RecipeRepository) *gin.Engine {
 	// CORS
 	router.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"http://localhost:3000"},
-		AllowMethods:     []string{"GET", "OPTIONS"},
-		AllowHeaders:     []string{"Content-Type"},
+		AllowMethods:     []string{"GET", "POST", "OPTIONS"},
+		AllowHeaders:     []string{"Origin", "Content-Type"},
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
