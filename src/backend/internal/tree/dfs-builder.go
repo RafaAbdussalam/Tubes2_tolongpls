@@ -10,8 +10,8 @@ type DFSBuilder struct {
 	repo            repo.RecipeRepository
 	visitedElements map[string]bool
 	mutex           sync.Mutex
-	nodeCount       uint8
-	maxDepth        uint8
+	nodeCount       int
+	maxDepth        int
 }
 
 func NewDFSBuilder(repo repo.RecipeRepository) *DFSBuilder {
@@ -23,7 +23,7 @@ func NewDFSBuilder(repo repo.RecipeRepository) *DFSBuilder {
 	}
 }
 
-func (b *DFSBuilder) BuildTree(rootElement string) (*model.RecipeTree, error) {
+func (b *DFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTree, error) {
 	// Inisialisasi pohon resep
 	tree := model.NewTree(rootElement, model.DFS)
 
@@ -39,13 +39,13 @@ func (b *DFSBuilder) BuildTree(rootElement string) (*model.RecipeTree, error) {
 	err := b.buildDFSRecursive(tree.Root, 0)
 
 	// Perbarui statistik pohon
-	tree.Count = b.nodeCount
+	tree.NodeCount = b.nodeCount
 	tree.Depth = b.maxDepth
 
 	return tree, err
 }
 
-func (b *DFSBuilder) buildDFSRecursive(node *model.ElementNode, depth uint8) error {
+func (b *DFSBuilder) buildDFSRecursive(node *model.ElementNode, depth int) error {
 	// Perbarui kedalaman maksimum jika diperlukan
 	if depth > b.maxDepth {
 		b.maxDepth = depth

@@ -7,17 +7,17 @@ import (
 )
 
 type BFSBuilder struct {
-   repo repo.RecipeRepository
+	repo repo.RecipeRepository
 }
 
 func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTree, error) {
-	
+
 	start := time.Now()
 	tree := model.NewTree(rootElement, model.BFS) // Start tree
-	queue := model.NewQueue(tree.Root) // Add root to queue
-	
+	queue := model.NewQueue(tree.Root)            // Add root to queue
+
 	// Loop through queue
-	for !queue.IsEmpty() && tree.Root.RecipeCount < amount{
+	for !queue.IsEmpty() && tree.Root.RecipeCount < amount {
 		current := queue.Pop()
 
 		if current.IsPrimary {
@@ -33,15 +33,15 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 		for _, recipe := range recipes {
 
 			// New element node
-			item1 := model.NewElementNode(recipe.Item1, current.Depth + 1)
-			item2 := model.NewElementNode(recipe.Item2, current.Depth + 1)		
-			
+			item1 := model.NewElementNode(recipe.Item1, current.Depth+1)
+			item2 := model.NewElementNode(recipe.Item2, current.Depth+1)
+
 			// New recipe node
 			recipeNode := &model.RecipeNode{
 				ParentElement: current,
-				Item1: item1,
-				Item2: item2,
-				RecipeCount: item1.RecipeCount * item2.RecipeCount,
+				Item1:         item1,
+				Item2:         item2,
+				RecipeCount:   item1.RecipeCount * item2.RecipeCount,
 			}
 
 			current.Ingredients = append(current.Ingredients, recipeNode)
@@ -54,7 +54,7 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 
 			// Update parent recipe node
 			item1.Parent = recipeNode
-    		item2.Parent = recipeNode
+			item2.Parent = recipeNode
 			model.BubbleCount(nil, recipeNode)
 
 			// Stop if found enough recipes
@@ -76,5 +76,5 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 	tree.Time = int(elapsed)
 
 	return tree, nil
-	
-}	
+
+}

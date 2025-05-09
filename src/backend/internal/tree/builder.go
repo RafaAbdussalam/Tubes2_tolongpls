@@ -12,23 +12,23 @@ type TreeBuilder interface {
 
 func NewBuilder(repo *repo.RecipeRepository, traversal model.Traversal) (TreeBuilder, error) {
 	switch traversal {
-		case model.BFS:
-			return &BFSBuilder{repo: *repo}, nil
-			// if amount > 1 {
-			// 	return &ParallelBuilder{
-			// 			base: &BFSBuilder{repo: repo},
-			// 			amount: amount,
-			// 	}
-			// }
-		case model.DFS:
-			// if amount > 1 {
-			// 	return &ParallelBuilder{
-			// 			base: &DFSBuilder{repo: repo},
-			// 			amount: amount,
-			// 	}
-			// }
-			return &DFSBuilder{repo: *repo}, nil // nanti ganti ke DFS
-		default:
-			return nil, fmt.Errorf("mode tidak valid")
+	case model.BFS:
+		return &BFSBuilder{repo: *repo}, nil
+		// if amount > 1 {
+		// 	return &ParallelBuilder{
+		// 			base: &BFSBuilder{repo: repo},
+		// 			amount: amount,
+		// 	}
+		// }
+	case model.DFS:
+		// if amount > 1 {
+		// 	return &ParallelBuilder{
+		// 			base: &DFSBuilder{repo: repo},
+		// 			amount: amount,
+		// 	}
+		// }
+		return &DFSBuilder{repo: *repo}, nil // nanti ganti ke DFS
+	default:
+		return nil, fmt.Errorf("mode tidak valid")
 	}
 }
