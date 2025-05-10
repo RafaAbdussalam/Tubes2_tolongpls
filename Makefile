@@ -1,27 +1,20 @@
-# Build and run dengan docker
+FRONTEND_DIR = ./src/frontend
+BACKEND_DIR = ./src/backend
+
+# RUN DEV MODE
+run-scraper:
+	cd $(BACKEND_DIR) && go run cmd/scraper/main.go
+run-backend:
+	cd $(BACKEND_DIR) && go run cmd/api/main.go
+run-frontend:
+	cd $(FRONTEND_DIR) && npm start
+
+# DOCKER
 up:
 	docker-compose up --build
-
-# Hentikan services
 down:
 	docker-compose down
 
-# Jalankan backend secara lokal (tanpa docker)
-run-backend:
-	cd src/backend && go run cmd/api/main.go
-
-# Install dependencies frontend
-install-frontend:
-	cd src/frontend && npm install
-
-# Jalankan frontend secara lokal
-run-frontend:
-	cd src/frontend && npm start
-
-# Jalankan scraper
-scrape-data:
-	cd src/backend && go run cmd/scraper/main.go
-
-# Print struktur direktori
+# ADDITIONAL
 directory-tree:
 	tree -F --prune -I node_modules .
