@@ -3,13 +3,18 @@ package scraper
 import (
 	"fmt"
 	"little_alchemy_backend/internal/model"
+	"strconv"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
+type ElementTierMap map[string]int
+
 func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 	var recipes []*model.Recipe
+	elementTiers := make(ElementTierMap)
+	currentTier := -1
 
 	// Cari setiap jenis elemen
 	doc.Find("h3").Each(func(i int, s *goquery.Selection) {
@@ -17,6 +22,22 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 
 		sectionID, exists := headline.Attr("id")
 		if !exists {
+			return
+		}
+
+		// Membuat konfigurasi tier
+		if strings.Contains(sectionID, "Starting_elements") || strings.Contains(sectionID, "Special_element") {
+			currentTier = 0
+		} else if strings.HasPrefix(sectionID, "Tier_") {
+			// Mengambil tier dari id. contoh: "Tier_1_elements" -> 1
+			tierParts := strings.Split(sectionID, "_")
+			if len(tierParts) >= 2 {
+				tierNum, err := strconv.Atoi(tierParts[1])
+				if err == nil {
+					currentTier = tierNum
+				}
+			}
+		} else {
 			return
 		}
 
@@ -41,11 +62,16 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 			element := strings.TrimSpace(tds.Eq(0).Text())
 			var item1, item2 string
 
+			// Catat tier elemen
+			if currentTier >= 0 {
+				elementTiers[element] = currentTier
+			}
+
 			// Cari recipe elemen (kolom kedua)
 			liFound := false
 			tds.Eq(1).Find("li").Each(func(_ int, li *goquery.Selection) {
 				text := strings.TrimSpace(li.Text())
-				if strings.Contains(text, "+") {
+				if strings.Contains(text, "+") && !(element == "Earth" || element == "Air" || element == "Fire" || element == "Water" || element == "Time") {
 
 					// Pisahkan berdasarkan '+' dalam <li>
 					parts := strings.Split(text, "+")
@@ -54,7 +80,11 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 					if len(parts) == 2 {
 						item1 = strings.TrimSpace(parts[0])
 						item2 = strings.TrimSpace(parts[1])
-						recipes = append(recipes, model.NewRecipe(element, item1, item2))
+						_, ok1 := elementTiers[item1]
+						_, ok2 := elementTiers[item2]
+						if ok1 && ok2 {
+							recipes = append(recipes, model.NewRecipe(element, item1, item2))
+						}
 					}
 
 					liFound = true

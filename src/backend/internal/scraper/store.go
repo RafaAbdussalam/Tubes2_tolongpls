@@ -16,8 +16,8 @@ type DataStore struct{}
 
 // Simpan ke CSV
 func (ds *DataStore) SaveToCSV(recipes []*model.Recipe, path string) error {
-	
-	// Setup file CSV 
+
+	// Setup file CSV
 	file, err := os.Create(path)
 	if err != nil {
 		log.Printf("Gagal membuat file %s: %v \n", path, err)
@@ -46,10 +46,10 @@ func (ds *DataStore) SaveToCSV(recipes []*model.Recipe, path string) error {
 	return nil
 }
 
-// Simpan ke DB 
+// Simpan ke DB
 func (ds *DataStore) SaveToDB(recipes []*model.Recipe, dbPath string) error {
-	
-	// Setup SQLite database 
+
+	// Setup SQLite database
 	db, err := sql.Open("sqlite", dbPath+"?_journal=OFF&_sync=OFF&_locking_mode=EXCLUSIVE")
 	if err != nil {
 		log.Printf("Gagal membuat file %s: %v \n", dbPath, err)
@@ -68,7 +68,7 @@ func (ds *DataStore) SaveToDB(recipes []*model.Recipe, dbPath string) error {
 		return err
 	}
 
-	// Hapus tabel lama 
+	// Hapus tabel lama
 	if _, err := db.Exec("DELETE FROM elements"); err != nil {
 		log.Printf("Gagal menghapus data lama: %v\n", err)
 		return err
