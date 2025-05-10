@@ -80,10 +80,12 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 					if len(parts) == 2 {
 						item1 = strings.TrimSpace(parts[0])
 						item2 = strings.TrimSpace(parts[1])
-						_, ok1 := elementTiers[item1]
-						_, ok2 := elementTiers[item2]
+						tier1, ok1 := elementTiers[item1]
+						tier2, ok2 := elementTiers[item2]
 						if ok1 && ok2 {
-							recipes = append(recipes, model.NewRecipe(element, item1, item2))
+							if tier1 < currentTier && tier2 < currentTier {
+								recipes = append(recipes, model.NewRecipe(element, item1, item2))
+							}
 						}
 					}
 
