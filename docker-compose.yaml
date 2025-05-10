@@ -6,8 +6,6 @@ services:
   scraper:
     build: ./src/backend
     command: /app/scraper
-    volumes:
-      - ./src/backend/data:/app/data
   
   # Backend service
   backend:
@@ -15,8 +13,6 @@ services:
     command: /app/api
     ports:
       - "8080:8080"
-    volumes:
-      - ./src/backend/data:/app/data
     environment:
       - GIN_MODE=release
     restart: unless-stopped
