@@ -14,7 +14,6 @@ Pressure,Air,Air
 Puddle,Water,Water
 Smoke,Fire,Air
 Steam,Water,Fire
-Steam,Water,Lava
 Brick,Mud,Fire
 Continent,Land,Land
 Continent,Land,Earth
@@ -65,10 +64,7 @@ Bullet,Gunpowder,Metal
 Dam,Water,Wall
 Desert,Sand,Sand
 Desert,Sand,Land
-Dune,Wind,Desert
 Dune,Wind,Sand
-Dune,Wind,Beach
-Dune,Sand,Desert
 Firewall,Fire,Wall
 Glass,Sand,Fire
 Glass,Sand,Heat
@@ -85,18 +81,12 @@ Rust,Air,Metal
 Sandstone,Sand,Stone
 Sandstone,Sand,Earth
 Sandstorm,Sand,Tornado
-Sandstorm,Desert,Tornado
-Sandstorm,Desert,Wind
 Sea,Lake,Lake
 Sea,Lake,Water
 Solar system,Planet,Planet
 Sun,Planet,Fire
 Venus,Planet,Volcano
-Waterfall,River,Mountain
-Waterfall,River,Mountain range
 Waterfall,Lake,Mountain
-Waterfall,Lake,Mountain range
-Wave,Sea,Wind
 Wave,Lake,Wind
 Aquarium,Glass,Water
 Aquarium,Glass,Puddle
@@ -137,11 +127,8 @@ Oasis,Desert,River
 Oasis,Desert,Lake
 Ocean,Sea,Sea
 Ocean,Sea,Water
-Primordial soup,Lava,Ocean
 Primordial soup,Lava,Sea
-Primordial soup,Planet,Ocean
 Primordial soup,Planet,Sea
-Primordial soup,Earth,Ocean
 Primordial soup,Earth,Sea
 Pyramid,Desert,Stone
 Pyramid,Desert,Mountain
@@ -150,37 +137,24 @@ Rocket,Atmosphere,Metal
 Safe,Metal,Gold
 Salt,Sea,Sun
 Salt,Sea,Fire
-Salt,Ocean,Sun
-Salt,Ocean,Fire
 Scissors,Blade,Blade
-Sky,Air,Cloud
 Sky,Sun,Atmosphere
 Sky,Sun,Moon
-Sky,Cloud,Atmosphere
 Solar cell,Sun,Energy
 Sound,Wave,Air
 Space station,Atmosphere,House
 Space station,Atmosphere,Wall
 Supernova,Explosion,Sun
-Supernova,Explosion,Galaxy
 Swimming pool,House,Lake
 Sword,Blade,Metal
-Telescope,Glass,Sky
 Telescope,Glass,Moon
 Telescope,Glass,Planet
-Telescope,Glass,Mars
 Telescope,Glass,Mercury
 Telescope,Glass,Venus
-Telescope,Glass,Galaxy
-Telescope,Glass,Supernova
-Tide,Ocean,Moon
-Tide,Ocean,Time
 Tide,Sea,Moon
 Tide,Sea,Time
 Tsunami,Sea,Earthquake
 Tsunami,Sea,Explosion
-Tsunami,Ocean,Earthquake
-Tsunami,Ocean,Explosion
 Village,House,House
 Windmill,Wind,House
 Acid rain,Cloud,Smoke
@@ -205,12 +179,10 @@ Flamethrower,Gun,Fire
 Flamethrower,Gun,Volcano
 Fog,Cloud,Earth
 Fog,Cloud,Mountain
-Fog,Cloud,City
 Fog,Cloud,Field
 Galaxy cluster,Galaxy,Galaxy
 Hangar,Rocket,House
 Hangar,Rocket,Wall
-Hangar,Rocket,Barn
 Horizon,Earth,Sky
 Horizon,Continent,Sky
 Horizon,Land,Sky
@@ -218,62 +190,39 @@ Horizon,Lake,Sky
 Horizon,Ocean,Sky
 Horizon,Sea,Sky
 Jupiter,Planet,Cloud
-Life,Primordial soup,Electricity
 Life,Primordial soup,Time
 Life,Primordial soup,Volcano
 Life,Primordial soup,Energy
-Life,Electricity,Ocean
-Life,Electricity,Sea
-Life,Electricity,Lake
-Light sword,Sword,Electricity
 Light sword,Sword,Energy
-Lightning,Electricity,Cloud
 Lightning,Energy,Cloud
 Meteor,Meteoroid,Atmosphere
 Meteor,Meteoroid,Sky
 Meteor,Meteoroid,Air
-Meteor,Meteoroid,Day
 Night,Sky,Moon
 Night,Time,Moon
-Night,Time,Day
 Paint,Water,Rainbow
-Paint,Water,Double rainbow!
-Park,City,Field
 Park,Village,Field
 Prism,Glass,Rainbow
-Prism,Glass,Double rainbow!
 Rain,Cloud,Heat
 Rain,Cloud,Pressure
 Rain,Cloud,Water
 Ruins,Time,House
 Ruins,Time,Village
-Ruins,Time,City
 Safety glasses,Glasses,Explosion
 Skyscraper,House,Sky
 Skyscraper,House,Cloud
 Skyscraper,Village,Sky
-Space,Solar system,Night
 Space,Solar system,Sky
 Storm,Cloud,Cloud
-Storm,Electricity,Cloud
-Storm,Electricity,Atmosphere
-Storm,Rain,Wind
-Stun gun,Gun,Electricity
 Stun gun,Gun,Energy
 Sunglasses,Glasses,Sun
 Sunglasses,Glasses,Beach
-Sunglasses,Glasses,Day
 Sunglasses,Glasses,Sky
 Swim goggles,Glasses,Water
 Swim goggles,Glasses,Lake
 Swim goggles,Glasses,Sea
 Swim goggles,Glasses,Ocean
 Swim goggles,Glasses,River
-Swim goggles,Sunglasses,Water
-Swim goggles,Sunglasses,Lake
-Swim goggles,Sunglasses,Sea
-Swim goggles,Sunglasses,Ocean
-Swim goggles,Sunglasses,River
 Water gun,Gun,Water
 Water gun,Gun,Puddle
 Alien,Life,Space
@@ -297,7 +246,6 @@ Dawn,Day,Night
 Dawn,Time,Night
 Death,Time,Life
 Farm,House,Barn
-Human,Time,Animal
 Human,Clay,Life
 Light bulb,Glass,Electricity
 Magic,Life,Rainbow
@@ -305,13 +253,9 @@ Magic,Life,Double rainbow!
 Ozone,Electricity,Atmosphere
 Ozone,Electricity,Air
 Phoenix,Fire,Life
-Phoenix,Fire,Death
 Plankton,Water,Life
 Plankton,Ocean,Life
 Plankton,Sea,Life
-Plankton,Bacteria,Water
-Plankton,Bacteria,Ocean
-Plankton,Bacteria,Sea
 Robot,Life,Metal
 Smog,Smoke,Fog
 Smog,City,Smoke
@@ -386,14 +330,11 @@ Corpse,Human,Time
 Corpse,Human,Explosion
 Crystal ball,Glass,Magic
 Cyborg,Robot,Human
-Cyborg,Robot,Astronaut
 Dew,Water,Dawn
 Dew,Fog,Dawn
 Domestication,Animal,Human
 Dynamite,Gunpowder,Wire
-Egg,Bird,Bird
 Egg,Phoenix,Phoenix
-Egg,Butterfly,Butterfly
 Electrician,Human,Electricity
 Electrician,Human,Wire
 Family,Human,Human
@@ -406,15 +347,9 @@ Fish,Animal,Water
 Fish,Animal,Sea
 Fish,Animal,Ocean
 Fish,Animal,Lake
-Fish,Egg,Water
-Fish,Egg,Sea
-Fish,Egg,Ocean
-Fish,Egg,Lake
 Force knight,Human,Light sword
 Frog,Animal,Pond
 Frog,Animal,Puddle
-Frog,Egg,Pond
-Frog,Egg,Puddle
 Glacier,Mountain,Snow
 Glacier,Mountain range,Snow
 Gravestone,Death,Stone
@@ -423,37 +358,23 @@ Hero,Human,Lightning
 Horse,Animal,Field
 Horse,Animal,Land
 Idea,Human,Light bulb
-Idea,Hacker,Hacker
-Idea,Farmer,Farmer
-Idea,Firefighter,Firefighter
-Idea,Electrician,Electrician
-Idea,Astronaut,Astronaut
-Idea,Alchemist,Alchemist
-Igloo,House,Cold
 Igloo,House,Snow
 Lamp,Light bulb,Metal
 Light,Electricity,Light bulb
 Livestock,Animal,Field
-Livestock,Animal,Farmer
 Livestock,Animal,Barn
-Livestock,Animal,Domestication
 Lizard,Stone,Animal
 Lizard,Heat,Animal
-Lizard,Egg,Stone
-Lizard,Blood,Cold
 Love,Human,Human
-Meat,Sword,Livestock
 Meat,Sword,Animal
 Microscope,Bacteria,Glass
 Microscope,Bacteria,Glasses
 Microscope,Bacteria,Safety glasses
 Monarch,Human,Excalibur
-Mummy,Pyramid,Corpse
 Mummy,Pyramid,Human
 Organic matter,Life,Death
 Organic matter,Bacteria,Death
 Painter,Human,Paint
-Pig,Mud,Livestock
 Pig,Mud,Animal
 Plant,Life,Soil
 Plant,Rain,Soil
@@ -463,7 +384,6 @@ Sailor,Human,Ocean
 Sailor,Human,Lake
 Samurai,Human,Katana
 Science,Human,Telescope
-Science,Human,Microscope
 Science,Human,Universe
 Scorpion,Animal,Sand
 Scorpion,Animal,Dune
@@ -471,33 +391,20 @@ Shuriken,Star,Blade
 Shuriken,Star,Sword
 Shuriken,Star,Metal
 Sickness,Human,Bacteria
-Sickness,Human,Sickness
 Ski goggles,Snow,Glasses
 Ski goggles,Snow,Sunglasses
-Ski goggles,Cold,Glasses
-Ski goggles,Cold,Sunglasses
-Ski goggles,Glacier,Glasses
-Ski goggles,Glacier,Sunglasses
-Skier,Human,Ski goggles
 Skier,Human,Mountain
 Skier,Human,Mountain range
 Sloth,Animal,Time
 Snake,Animal,Wire
-Snow globe,Crystal ball,Cold
-Snow globe,Crystal ball,Snow
-Snow globe,Crystal ball,Blizzard
 Snow globe,Glass,Snow
-Snow globe,Glass,Blizzard
 Snowball,Snow,Human
 Snowball,Snow,Stone
 Snowball,Snow,Earth
 Snowman,Snow,Human
-Snowman,Snowball,Snowball
-Starfish,Star,Fish
 Starfish,Star,Ocean
 Starfish,Star,Sea
 Sundial,Sun,Clock
-Sundial,Light,Clock
 Surfer,Human,Wave
 Surfer,Human,Beach
 Swimmer,Human,Water
@@ -506,8 +413,6 @@ Swimmer,Human,Pond
 Swimmer,Human,Swimming pool
 Tool,Human,Metal
 Tool,Human,Stone
-Turtle,Egg,Sand
-Turtle,Egg,Beach
 Turtle,Animal,Beach
 Ufo,Alien,Rocket
 Ufo,Alien,Spaceship
@@ -588,18 +493,13 @@ Dog,Wolf,Farmer
 Dog,Wolf,Farm
 Dog,Wolf,Barn
 Dog,Wolf,Field
-Dog,Wolf,Bone
 Don quixote,Windmill,Hero
 Dragon,Lizard,Fire
 Dragon,Lizard,Air
 Dragon,Lizard,Sky
-Dragon,Lizard,Airplane
 Duck,Bird,Water
 Duck,Bird,Pond
 Duck,Bird,Lake
-Duck,Chicken,Water
-Duck,Chicken,Pond
-Duck,Chicken,Lake
 Eagle,Bird,Mountain
 Eagle,Bird,Mountain range
 Egg timer,Egg,Clock
@@ -622,73 +522,43 @@ Flower,Plant,Double rainbow!
 Flying fish,Fish,Bird
 Flying fish,Fish,Sky
 Flying fish,Fish,Air
-Fossil,Dinosaur,Earth
-Fossil,Dinosaur,Stone
-Fossil,Dinosaur,Time
-Fossil,Bone,Time
-Fossil,Bone,Earth
-Fossil,Bone,Stone
 Fossil,Corpse,Stone
 Frankenstein's monster,Corpse,Lightning
 Frankenstein's monster,Corpse,Electricity
 Fridge,Cold,Metal
 Fridge,Cold,Electricity
 Garden,Plant,House
-Garden,Flower,Flower
-Garden,Flower,Plant
-Garden,Flower,House
 Gas,Air,Idea
 Gas,Air,Science
 Ghost,Gravestone,Night
-Ghost,Castle,Night
 Goat,Livestock,Mountain
 Goat,Livestock,Mountain range
-Goat,Cow,Mountain
-Goat,Cow,Mountain range
 Grass,Plant,Earth
 Grass,Plant,Land
 Grave,Earth,Corpse
 Grave,Field,Corpse
-Grave,Gravestone,Grave
-Graveyard,Grave,Grave
-Graveyard,Grave,Field
-Graveyard,Grave,Land
 Graveyard,Gravestone,Gravestone
 Graveyard,Gravestone,Field
 Graveyard,Gravestone,Land
 Greenhouse,Glass,Plant
-Greenhouse,Glass,Grass
-Greenhouse,Glass,Garden
 Greenhouse,Aquarium,Plant
-Greenhouse,Aquarium,Grass
 Ham,Smoke,Meat
 Ham,Smoke,Pig
 Hammer,Tool,Metal
 Hammer,Tool,Stone
 Hedge,Plant,Fence
-Hedge,Garden,Fence
 Hedge,Plant,Wall
-Hedge,Garden,Wall
 Hippo,Horse,River
 Hippo,Horse,Water
-Hippo,Cow,River
-Hippo,Cow,Water
 Horseshoe,Horse,Metal
 Hospital,House,Sickness
 Hospital,Wall,Sickness
-Hummingbird,Bird,Flower
-Hummingbird,Bird,Garden
 Hummingbird,Bird,Butterfly
 Ice,Water,Cold
 Ice,Puddle,Cold
-Iceberg,Sea,Ice
 Iceberg,Sea,Antarctica
-Iceberg,Sea,Arctic
-Iceberg,Ocean,Ice
 Iceberg,Ocean,Antarctica
-Iceberg,Ocean,Arctic
 Ivy,Plant,Wall
-Ivy,Grass,Wall
 Jerky,Meat,Sun
 Jerky,Meat,Heat
 Knight,Warrior,Hero
@@ -696,11 +566,8 @@ Knight,Warrior,Horse
 Lava lamp,Lamp,Lava
 Lava lamp,Lamp,Fire
 Lava lamp,Lamp,Volcano
-Leather,Blade,Cow
 Leather,Blade,Pig
-Leather,Sword,Cow
 Leather,Sword,Pig
-Leather,Tool,Cow
 Leather,Tool,Pig
 Lens,Glass,Tool
 Lighthouse,Light,House
@@ -728,22 +595,16 @@ Mineral,Organic matter,Stone
 Mineral,Organic matter,Earth
 Mineral,Organic matter,Mountain
 Moss,Stone,Plant
-Moss,Stone,Grass
-Moss,Stone,Algae
 Moth,Butterfly,Moon
 Moth,Butterfly,Night
 Moth,Butterfly,Light
 Moth,Butterfly,Lamp
-Moth,Butterfly,Flashlight
 Motion,Wind,Science
 Motion,Wind,Idea
 Motion,Tornado,Science
 Motion,River,Science
-Nest,Bird,Grass
 Nest,Bird,House
-Nest,Egg,Grass
 Ninja,Human,Shuriken
-Ninja turtle,Turtle,Ninja
 Ninja turtle,Turtle,Shuriken
 Ninja turtle,Turtle,Katana
 Omelette,Egg,Fire
@@ -757,22 +618,15 @@ Owl,Bird,Wizard
 Owl,Bird,Moon
 Owl,Bird,Twilight
 Oxygen,Sun,Plant
-Oxygen,Sun,Grass
-Oxygen,Sun,Algae
-Oxygen,Carbon dioxide,Plant
-Oxygen,Carbon dioxide,Grass
-Oxygen,Carbon dioxide,Algae
 Peacock,Bird,Rainbow
 Peacock,Bird,Double rainbow!
 Pegasus,Horse,Bird
 Pegasus,Horse,Sky
 Penguin,Bird,Antarctica
 Penguin,Bird,Snow
-Penguin,Bird,Ice
 Penguin,Bird,Cold
 Penguin,Animal,Antarctica
 Philosophy,Human,Idea
-Philosophy,Egg,Chicken
 Pigeon,Bird,City
 Pigeon,Bird,Skyscraper
 Pigeon,Bird,Village
@@ -782,19 +636,13 @@ Piranha,Fish,Wolf
 Pirate,Sailor,Sword
 Pirate,Sailor,Bayonet
 Pirate,Sailor,Gun
-Platypus,Beaver,Duck
 Platypus,Beaver,Bird
 Pollen,Plant,Dust
 Pollen,Plant,Wind
-Pollen,Flower,Dust
-Pollen,Flower,Wind
 Pottery,Clay,Tool
 Reed,Plant,Pond
 Reed,Plant,Puddle
 Reed,Plant,River
-Reed,Grass,Pond
-Reed,Grass,Puddle
-Reed,Grass,River
 Ring,Love,Gold
 Ring,Love,Metal
 Roe,Egg,Fish
@@ -802,20 +650,13 @@ Roe,Egg,Water
 Roe,Egg,Ocean
 Roe,Egg,Sea
 Roe,Egg,Lake
-Roe,Egg,Flying fish
 Rope,Wire,Tool
 Rose,Love,Plant
-Rose,Love,Flower
 Rose,Blade,Plant
-Rose,Blade,Flower
-Saddle,Horse,Leather
 Saddle,Horse,Tool
 Seagull,Bird,Sea
 Seagull,Bird,Ocean
 Seagull,Bird,Beach
-Seagull,Pigeon,Sea
-Seagull,Pigeon,Ocean
-Seagull,Pigeon,Beach
 Seahorse,Horse,Water
 Seahorse,Horse,Sea
 Seahorse,Horse,Ocean
@@ -827,8 +668,6 @@ Seasickness,Sickness,Lake
 Seaweed,Plant,Sea
 Seaweed,Plant,Ocean
 Seaweed,Plant,Lake
-Seaweed,Grass,Sea
-Seaweed,Grass,Ocean
 Shark,Wolf,Sea
 Shark,Wolf,Ocean
 Shark,Wolf,Fish
@@ -837,78 +676,46 @@ Shark,Blood,Ocean
 Shark,Blood,Fish
 Sheep,Livestock,Land
 Sheep,Livestock,Cloud
-Sheep,Goat,Domestication
 Skeleton,Time,Corpse
-Skeleton,Bone,Bone
-Skeleton,Bone,Corpse
 Snowboard,Snow,Surfer
-Snowboard,Ice,Surfer
 Snowboard,Surfer,Mountain
 Snowboard,Surfer,Mountain range
 Solid,Earth,Idea
 Solid,Earth,Science
-Spotlight,Light,Machine
 Spotlight,Light,Metal
 Steak,Meat,Fire
-Steak,Cow,Fire
 Stethoscope,Tool,Sound
-Stethoscope,Tool,Hospital
 Story,Human,Hero
 Sunflower,Sun,Plant
-Sunflower,Sun,Flower
 Swordfish,Fish,Sword
 Swordfish,Fish,Blade
-Swordfish,Shark,Sword
-Swordfish,Shark,Blade
 Tobacco,Plant,Fire
 Tobacco,Plant,Smoke
-Tobacco,Grass,Smoke
 Toolbox,Tool,Safe
 Toucan,Bird,Rainbow
 Toucan,Bird,Double rainbow!
 Tree,Plant,Time
 Umbrella,Rain,Tool
 Umbrella,Storm,Tool
-Unicorn,Horse,Story
 Unicorn,Horse,Magic
 Unicorn,Horse,Rainbow
 Unicorn,Horse,Double rainbow!
 Vampire,Human,Blood
-Vampire,Human,Vampire
 Vegetable,Farmer,Field
 Vegetable,Farmer,Plant
 Vegetable,Plant,Field
 Vegetable,Plant,Domestication
 Vulture,Corpse,Bird
-Vulture,Corpse,Eagle
-Vulture,Corpse,Owl
-Vulture,Corpse,Hummingbird
-Vulture,Corpse,Pigeon
-Vulture,Corpse,Penguin
-Vulture,Corpse,Chicken
-Vulture,Corpse,Duck
 Vulture,Desert,Bird
-Vulture,Desert,Eagle
-Vulture,Desert,Owl
-Vulture,Desert,Hummingbird
-Vulture,Desert,Pigeon
-Vulture,Desert,Penguin
-Vulture,Desert,Duck
 Wand,Wizard,Sword
 Wand,Wizard,Tool
 Werewolf,Human,Wolf
-Werewolf,Human,Werewolf
-Wheel,Motion,Tool
-Wheel,Motion,Stone
-Wheel,Motion,Metal
 Wheel,Tool,Water
 Wheel,Tool,River
 Wild boar,Pig,Animal
 Windsurfer,Wind,Surfer
 Zombie,Corpse,Life
-Zombie,Corpse,Story
 Zombie,Corpse,Bacteria
-Zombie,Human,Zombie
 Alpaca,Sheep,Mountain
 Alpaca,Sheep,Mountain range
 Angler,Human,Fishing rod
@@ -932,8 +739,6 @@ Bonsai tree,Tree,Wire
 Cannon,Gunpowder,Castle
 Cannon,Gun,Castle
 Car,Wheel,Metal
-Car,Wheel,Bicycle
-Car,Bicycle,Bicycle
 Cauldron,Pottery,Metal
 Caviar,Roe,Salt
 Chicken coop,Chicken,House
@@ -959,14 +764,12 @@ Coral,Fossil,Ocean
 Coral,Bone,Sea
 Coral,Bone,Ocean
 Cyclist,Human,Wheel
-Cyclist,Human,Bicycle
 Diamond,Coal,Pressure
 Doctor,Human,Hospital
 Doctor,Human,Stethoscope
 Doge,Dog,Computer
 Doghouse,Dog,House
 Doghouse,Dog,Wall
-Doghouse,Dog,Container
 Drone,Robot,Airplane
 Dry ice,Carbon dioxide,Cold
 Dry ice,Carbon dioxide,Ice
@@ -987,13 +790,9 @@ Fire extinguisher,Carbon dioxide,Boiler
 Forest,Tree,Tree
 Forest,Tree,Plant
 Forest,Tree,Land
-Forest,Tree,Container
 Fox,Chicken,Animal
 Fox,Chicken,Wolf
 Fox,Chicken,Dog
-Fox,Chicken coop,Animal
-Fox,Chicken coop,Wolf
-Fox,Chicken coop,Dog
 Fruit,Flower,Time
 Fruit,Flower,Rain
 Fruit,Flower,Water
@@ -1002,7 +801,6 @@ Fruit,Tree,Farmer
 Gardener,Human,Garden
 Gardener,Farmer,Garden
 Gnome,Garden,Story
-Gnome,Garden,Fairy tale
 Golem,Clay,Story
 Hail,Ice,Rain
 Hail,Ice,Cloud
@@ -1030,11 +828,6 @@ Internet,Computer,Wire
 Jack-o'-lantern,Vegetable,Ghost
 Jack-o'-lantern,Vegetable,Skeleton
 Jack-o'-lantern,Vegetable,Night
-Juice,Fruit,Pressure
-Juice,Fruit,Earth
-Juice,Fruit,Stone
-Juice,Fruit,Explosion
-Juice,Fruit,Water
 Juice,Vegetable,Pressure
 Juice,Vegetable,Stone
 Juice,Vegetable,Explosion
@@ -1049,19 +842,12 @@ Lasso,Rope,Wild boar
 Lasso,Rope,Sheep
 Lasso,Rope,Goat
 Lawn,Grass,House
-Lawn,Grass,Container
 Lawn mower,Grass,Tool
 Lawn mower,Grass,Machine
-Lawn mower,Helicopter,Field
 Leaf,Tree,Wind
 Leaf,Flower,Wind
-Leaf,Forest,Wind
 Legend,Story,Time
 Legend,Story,Story
-Legend,Story,Big
-Legend,Story,Fairy tale
-Legend,Fairy tale,Time
-Legend,Fairy tale,Big
 Lumberjack,Human,Tree
 Manatee,Cow,Sea
 Manatee,Cow,Ocean
@@ -1079,9 +865,6 @@ Milk,Goat,Liquid
 Minotaur,Human,Cow
 Minotaur,Cow,Werewolf
 Minotaur,Cow,Story
-Minotaur,Cow,Legend
-Mold,Fruit,Time
-Mold,Fruit,Bacteria
 Mold,Vegetable,Time
 Mold,Vegetable,Bacteria
 Monkey,Animal,Tree
@@ -1094,11 +877,8 @@ Narwhal,Unicorn,Water
 Narwhal,Unicorn,Shark
 Narwhal,Unicorn,Swordfish
 Narwhal,Unicorn,Flying fish
-Nessie,Lake,Legend
 Nessie,Lake,Story
-Nessie,Dinosaur,Legend
 Nessie,Dinosaur,Story
-Net,Angler,Rope
 Net,Fishing rod,Rope
 Net,Fish,Rope
 Net,Swordfish,Rope
@@ -1138,7 +918,6 @@ Petroleum,Fossil,Liquid
 Petroleum,Fossil,Water
 Pilot,Human,Airplane
 Pipe,Tobacco,Tool
-Pirate ship,Pirate,Container
 Pirate ship,Pirate,House
 Polar bear,Animal,Ice
 Polar bear,Animal,Arctic
@@ -1151,11 +930,8 @@ Pterodactyl,Dinosaur,Vulture
 Pterodactyl,Dinosaur,Airplane
 Pumpkin,Vegetable,Field
 Pumpkin,Vegetable,Farmer
-Pumpkin,Vegetable,Jack-o'-lantern
-Pumpkin,Plant,Jack-o'-lantern
 Quicksilver,Metal,Liquid
 Rabbit,Animal,Carrot
-Rabbit,Rabbit,Rabbit
 Rivulet,Puddle,Motion
 Sand castle,Castle,Sand
 Sand castle,Castle,Beach
@@ -1163,9 +939,7 @@ Sand castle,Castle,Desert
 Sand castle,Castle,Dune
 Sap,Tree,Blade
 Saturn,Ring,Planet
-Scalpel,Blade,Doctor
 Scalpel,Blade,Hospital
-Scalpel,Sword,Doctor
 Scalpel,Sword,Hospital
 Scythe,Blade,Grass
 Scythe,Sword,Grass
@@ -1179,7 +953,6 @@ Seaplane,Airplane,Sea
 Seaplane,Airplane,Ocean
 Seaplane,Airplane,Lake
 Seed,Pollen,Plant
-Seed,Pollen,Bee
 Seed,Time,Flower
 Skateboard,Wheel,Snowboard
 Skateboard,Wheel,Skier
@@ -1188,28 +961,20 @@ Small,Philosophy,Bacteria
 Small,Philosophy,Oxygen
 Small,Philosophy,Carbon dioxide
 Small,Philosophy,Ozone
-Small,Philosophy,Rivulet
-Small,Philosophy,Ant
-Small,Philosophy,Bee
 Small,Philosophy,Scorpion
 Small,Philosophy,Seahorse
 Snowboarder,Human,Snowboard
 Soda,Carbon dioxide,Water
-Soda,Carbon dioxide,Juice
 Sphinx,Lion,Stone
 Statue,Stone,Hammer
 Statue,Medusa,Human
 Statue,Medusa,Hacker
-Statue,Medusa,Engineer
-Statue,Medusa,Lumberjack
-Statue,Medusa,Pilot
 Statue,Medusa,Sailor
 Statue,Medusa,Farmer
 Statue,Medusa,Firefighter
 Statue,Medusa,Surfer
 Statue,Medusa,Astronaut
 Statue,Medusa,Butcher
-Statue,Medusa,Doctor
 Statue,Medusa,Mirror
 Steam engine,Steam,Machine
 Steam engine,Steam,Wheel
@@ -1219,10 +984,7 @@ Steel,Metal,Charcoal
 Steel,Metal,Mineral
 Steel,Metal,Ash
 Stream,Pond,Motion
-Stream,Rivulet,Big
-Stream,River,Small
 Sushi,Fish,Seaweed
-Sushi,Caviar,Seaweed
 Swamp,Mud,Grass
 Swamp,Mud,Tree
 Swamp,Tree,Lake
@@ -1239,9 +1001,6 @@ Thread,Cotton,Wheel
 Thread,Cotton,Machine
 Treehouse,Tree,House
 Trojan horse,Horse,Machine
-Trojan horse,Horse,Statue
-Tunnel,Engineer,Mountain
-Tunnel,Engineer,Mountain range
 Tunnel,Cave,Mountain
 Tunnel,Cave,Mountain range
 Tyrannosaurus rex,Dinosaur,Meat
@@ -1250,36 +1009,22 @@ Tyrannosaurus rex,Dinosaur,Monarch
 Vase,Pottery,Plant
 Vase,Pottery,Flower
 Vase,Pottery,Rose
-Vase,Container,Flower
-Vase,Container,Rose
 Water lily,Flower,Pond
 Water lily,Flower,Puddle
 Water lily,Flower,Lake
-Water lily,Flower,Stream
 Wheat,Grass,Farmer
 Wheat,Grass,Domestication
 Wheat,Grass,Field
 Wood,Tree,Tool
 Wood,Tree,Sword
-Wood,Tree,Lumberjack
-Wood,Forest,Tool
-Wood,Forest,Sword
-Wood,Forest,Lumberjack
-Woodpecker,Bird,Wood
 Woodpecker,Bird,Tree
-Woodpecker,Bird,Forest
 Wool,Sheep,Tool
 Wool,Sheep,Scissors
 Wool,Sheep,Blade
 Yeti,Mountain,Story
-Yeti,Mountain,Legend
 Yeti,Mountain range,Story
-Yeti,Mountain range,Legend
 Yeti,Glacier,Story
-Yeti,Glacier,Legend
 Yeti,Antarctica,Story
-Yeti,Antarctica,Legend
-Zoo,Animal,Container
 Zoo,Animal,Cage
 Alcohol,Time,Juice
 Alcohol,Wheat,Fruit
@@ -1307,9 +1052,7 @@ Beehive,Forest,Bee
 Beehive,Wall,Bee
 Beehive,Wood,Bee
 Beehive,Container,Bee
-Beekeeper,Human,Beehive
 Beekeeper,Human,Bee
-Beekeeper,Farmer,Beehive
 Beekeeper,Farmer,Bee
 Blood bag,Blood,Container
 Boat,Wood,Water
@@ -1325,7 +1068,6 @@ Bottle,Container,Milk
 Bottle,Container,Water
 Bottle,Container,Juice
 Bottle,Container,Oil
-Bottle,Container,Alcohol
 Bottle,Container,Soda
 Bottle,Container,Perfume
 Bottle,Container,Liquid
@@ -1335,8 +1077,6 @@ Bow,Wood,Wire
 Broom,Wood,Hay
 Bucket,Container,Wood
 Bucket,Container,Paint
-Bucket,Bottle,River
-Bucket,Bottle,Paint
 Bucket,Chicken wing,Container
 Bus,Car,Car
 Bus,Car,City
@@ -1354,9 +1094,6 @@ Cashmere,Mountain goat,Tool
 Cashmere,Mountain goat,Scissors
 Cashmere,Mountain goat,Wool
 Cereal,Wheat,Milk
-Chainsaw,Axe,Machine
-Chainsaw,Axe,Electricity
-Chainsaw,Axe,Motion
 Chainsaw,Lumberjack,Machine
 Chainsaw,Lumberjack,Electricity
 Cheese,Milk,Tool
@@ -1364,7 +1101,6 @@ Cheese,Milk,Time
 Cheese,Milk,Cook
 Cheese,Milk,Bacteria
 Christmas stocking,Christmas tree,Wool
-Closet,Container,Broom
 Closet,Container,Toolbox
 Closet,Container,Umbrella
 Coconut milk,Coconut,Milk
@@ -1372,7 +1108,6 @@ Coconut milk,Coconut,Tool
 Coconut milk,Coconut,Hammer
 Coconut milk,Coconut,Sword
 Coconut milk,Coconut,Blade
-Coconut milk,Coconut,Axe
 Coffin,Wood,Corpse
 Coffin,Container,Corpse
 Coffin,Container,Vampire
@@ -1384,10 +1119,6 @@ Electric car,Solar cell,Car
 Fabric,Thread,Machine
 Fabric,Thread,Tool
 Fabric,Thread,Wheel
-Fireplace,Campfire,House
-Fireplace,Campfire,Brick
-Fireplace,Campfire,Wall
-Fireplace,Campfire,Container
 Fireplace,Wood,Container
 Firetruck,Firefighter,Car
 Firetruck,Fire,Car
@@ -1410,39 +1141,20 @@ Garage,Car,House
 Garage,Car,Container
 Garage,Car,Wall
 Garage,Car,Barn
-Garage,Ambulance,House
-Garage,Ambulance,Container
-Garage,Ambulance,Wall
-Garage,Ambulance,Barn
-Garage,Bus,House
-Garage,Bus,Container
-Garage,Bus,Wall
-Garage,Bus,Barn
-Garage,Electric car,House
-Garage,Electric car,Container
-Garage,Electric car,Wall
-Garage,Electric car,Barn
 Grim reaper,Human,Scythe
 Grim reaper,Corpse,Scythe
 Grim reaper,Zombie,Scythe
 Grim reaper,Death,Scythe
-Grim reaper,Boat,Scythe
 Grim reaper,River,Scythe
 Gust,Wind,Small
 Gust,Air,Small
 Hay bale,Hay,Hay
 Hay bale,Hay,Barn
 Hay bale,Hay,Machine
-Hill,Big,Boulder
-Hill,Earth,Boulder
-Hill,Stone,Boulder
-Hill,Boulder,Boulder
 Hill,Mountain,Small
 Honey,Bee,Flower
-Honey,Bee,Beehive
 Honey,Bee,Time
 Honey,Bee,Bee
-Honey,Beehive,Beekeeper
 Ice cream,Milk,Cold
 Ice cream,Milk,Ice
 Ice cream,Milk,Snow
@@ -1459,7 +1171,6 @@ Log cabin,Wood,House
 Maple syrup,Sap,Heat
 Mayonnaise,Egg,Oil
 Moon rover,Moon,Car
-Moon rover,Moon,Electric car
 Motorcycle,Bicycle,Machine
 Motorcycle,Bicycle,Metal
 Motorcycle,Bicycle,Steel
@@ -1472,7 +1183,6 @@ Paper,Wood,Pressure
 Paper,Wood,Water
 Paper,Wood,Blender
 Paper,Wood,Machine
-Peanut butter,Nuts,Butter
 Peanut butter,Nuts,Pressure
 Pebble,Small,Earth
 Pebble,Small,Stone
@@ -1497,34 +1207,21 @@ Rainforest,Rain,Forest
 Rat,Animal,Pirate ship
 Reindeer,Animal,Christmas tree
 Reindeer,Livestock,Christmas tree
-Reindeer,Animal,Christmas stocking
 Restaurant,House,Cook
 Roller coaster,Park,Car
-Roller coaster,Park,Cart
 Rv,House,Car
-Rv,House,Bus
-Sack,Container,Flour
 Sack,Container,Salt
 Santa,Christmas tree,Human
 Santa,Christmas tree,Legend
 Santa,Christmas tree,Story
-Santa,Christmas stocking,Human
-Santa,Christmas stocking,Legend
-Santa,Christmas stocking,Story
 Scarecrow,Hay,Human
 Scarecrow,Hay,Statue
 Scarecrow,Hay,Golem
-Scarecrow,Hay,Sack
 Scarecrow,Farm,Statue
 Scarecrow,Barn,Statue
-Scarecrow,Pumpkin,Sack
-Scarecrow,Jack-o'-lantern,Sack
 Scuba tank,Container,Air
 Scuba tank,Container,Atmosphere
 Scuba tank,Container,Oxygen
-Sewing machine,Needle,Machine
-Sewing machine,Needle,Electricity
-Sewing machine,Needle,Robot
 Sewing machine,Thread,Machine
 Sewing machine,Thread,Electricity
 Sewing machine,Thread,Robot
@@ -1539,18 +1236,14 @@ Silo,Wheat,Bank
 Smoothie,Fruit,Blender
 Smoothie,Fruit,Ice
 Smoothie,Fruit,Cold
-Snowmobile,Snow,Motorcycle
 Snowmobile,Snow,Car
-Snowmobile,Glacier,Motorcycle
 Snowmobile,Glacier,Car
-Snowmobile,Ice,Motorcycle
 Snowmobile,Ice,Car
 Soap,Oil,Ash
 Soap,Oil,Clay
 Spider,Animal,Thread
 Spider,Animal,Net
 Squirrel,Animal,Nuts
-Steamboat,Steam engine,Boat
 Steamboat,Steam engine,Pirate ship
 Steamboat,Steam engine,Ocean
 Steamboat,Steam engine,Sea
@@ -1561,12 +1254,8 @@ Sugar,Fruit,Fire
 Sugar,Fruit,Energy
 Sugar,Juice,Fire
 Sugar,Juice,Energy
-Sugar,Alcohol,Fire
-Sugar,Alcohol,Energy
 Sweater,Wool,Tool
 Sweater,Wool,Human
-Tailor,Human,Sewing machine
-Tailor,Human,Needle
 Tailor,Human,Thread
 Tank,Car,Gun
 Tank,Car,Metal
@@ -1577,10 +1266,7 @@ Tea,Leaf,Heat
 Thermometer,Quicksilver,Glass
 Thermometer,Quicksilver,Tool
 Thermometer,Quicksilver,Engineer
-Titanic,Boat,Iceberg
-Titanic,Steamboat,Iceberg
 Titanic,Iceberg,Legend
-Titanic,Steamboat,Legend
 Tractor,Car,Farmer
 Tractor,Car,Field
 Tractor,Car,Cow
@@ -1589,16 +1275,9 @@ Train,Steam engine,Steel
 Train,Steam engine,Wheel
 Vault,Safe,Big
 Water pipe,Water,Pipe
-Witch,Broom,Wizard
-Witch,Broom,Human
-Witch,Broom,Legend
-Witch,Broom,Story
-Witch,Broom,Magic
-Witch,Broom,Cauldron
 Witch,Cauldron,Story
 Witch,Cauldron,Legend
 Yogurt,Bacteria,Milk
-Yogurt,Bacteria,Ice cream
 Apron,Fabric,Cook
 Armor,Metal,Fabric
 Armor,Steel,Fabric
@@ -1648,7 +1327,6 @@ Dough,Flour,Water
 Dough,Flour,Puddle
 Dough,Flour,Rain
 Drunk,Human,Alcohol
-Drunk,Human,Beer
 Excavator,Shovel,Big
 Excavator,Shovel,Car
 Flying squirrel,Squirrel,Bird
@@ -1712,12 +1390,10 @@ Mouse,Cheese,Wall
 Mousetrap,Cheese,Wood
 Mousetrap,Cheese,Metal
 Mousetrap,Cheese,Steel
-Mousetrap,Mouse,Blade
 Musician,Human,Flute
 Musician,Human,Drum
 Newspaper,Paper,Paper
 Newspaper,Paper,Story
-Newspaper,Letter,Letter
 Orchard,Fruit tree,Fruit tree
 Orchard,Fruit tree,Field
 Orchard,Fruit tree,Tree
@@ -1747,19 +1423,13 @@ Pasta,Flour,Egg
 Pencil sharpener,Pencil,Blade
 Pencil sharpener,Pencil,Blender
 Pencil sharpener,Pencil,Sword
-Pizza,Cheese,Dough
 Pizza,Cheese,Wheel
 Printer,Computer,Paper
-Printer,Computer,Newspaper
 Recipe,Paper,Flour
 Recipe,Paper,Meat
 Recipe,Paper,Vegetable
 Recipe,Paper,Fruit
 Recipe,Paper,Cook
-Recipe,Newspaper,Flour
-Recipe,Newspaper,Meat
-Recipe,Newspaper,Vegetable
-Recipe,Newspaper,Fruit
 Robot vacuum,Robot,Broom
 Robot vacuum,Computer,Broom
 Rock,Pebble,Pebble
@@ -1778,9 +1448,7 @@ Sleigh,Cart,Arctic
 Sleigh,Cart,Antarctica
 Smoke signal,Fabric,Campfire
 Smoke signal,Fabric,Smoke
-Smoke signal,Smoke,Letter
 Spoon,Shovel,Small
-Sprinkles,Sugar,Confetti
 Sprinkles,Sugar,Paint
 Sprinkles,Sugar,Rainbow
 Sprinkles,Sugar,Double rainbow!
@@ -1817,7 +1485,6 @@ Web,Spider,Fabric
 Web,Spider,Net
 Wine,Alcohol,Fruit
 Wine,Alcohol,Juice
-Wrapping paper,Paper,Gift
 Wrapping paper,Paper,Christmas tree
 Wrapping paper,Paper,Christmas stocking
 Wrapping paper,Paper,Santa
@@ -1856,22 +1523,14 @@ Cookie dough,Dough,Sugar
 Cookie dough,Dough,Chocolate
 Donut,Dough,Oil
 Donut,Dough,Wheel
-Donut,Cookie dough,Oil
-Donut,Cookie dough,Wheel
 Email,Letter,Computer
 Email,Letter,Computer mouse
 Email,Letter,Internet
 Email,Letter,Electricity
 Gingerbread house,House,Dough
-Gingerbread house,House,Cookie dough
-Gingerbread house,House,Donut
 Gingerbread man,Dough,Life
 Gingerbread man,Dough,Magic
 Gingerbread man,Dough,Story
-Gingerbread man,Cookie dough,Life
-Gingerbread man,Cookie dough,Magic
-Gingerbread man,Cookie dough,Story
-Hot chocolate,Chocolate milk,Heat
 Hot chocolate,Chocolate,Heat
 Librarian,Human,Library
 Mac and cheese,Cheese,Pasta
@@ -1882,7 +1541,6 @@ Mailbox,Letter,Steel
 Mailbox,Letter,Wood
 Mailman,Human,Letter
 Mailman,Human,Newspaper
-Mailman,Letter,Mailbox
 Music,Musician,Flute
 Music,Musician,Drum
 Music,Musician,Pan flute
@@ -1891,13 +1549,7 @@ Painting,Canvas,Painter
 Paper cup,Cup,Paper
 Paraglider,Kite,Big
 Pie,Dough,Fruit
-Pie,Cookie dough,Fruit
 Pie,Dough,Meat
-Pie,Fruit,Baker
-Post office,Mailman,House
-Post office,Mailman,Wall
-Post office,Mailman,Container
-Post office,Mailman,Letter
 Post office,Letter,Letter
 Post office,Letter,House
 Post office,Letter,Wall
@@ -1905,8 +1557,6 @@ Smartphone,Small,Tablet
 Spaghetti,Pasta,Thread
 Spaghetti,Pasta,Wire
 Spaghetti,Pasta,Rope
-String phone,Paper cup,Wire
-String phone,Paper cup,Thread
 String phone,Cup,Wire
 String phone,Cup,Thread
 Treasure map,Map,Pirate
@@ -1933,7 +1583,6 @@ Cookie,Cookie dough,Fire
 Cookie,Cookie dough,Baker
 Cookie,Cookie dough,Cookie cutter
 Cookie,Dough,Cookie cutter
-Fortune cookie,Paper,Cookie
 Fortune cookie,Paper,Cookie dough
 Fortune cookie,Paper,Gingerbread man
 Sandwich,Bread,Meat
@@ -1943,7 +1592,6 @@ Sandwich,Bread,Cheese
 Sandwich,Bread,Vegetable
 Sheet music,Music,Paper
 Sheet music,Music,Book
-Toast,Sandwich,Fire
 Toast,Bread,Fire
 Treasure,Treasure map,Pirate
 Treasure,Treasure map,Pirate ship
