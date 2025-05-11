@@ -9,9 +9,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-type ElementTierMap map[string]int
-
-func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
+func ParseHTML(doc *goquery.Document) ([]*model.Recipe, ElementTierMap, error) {
 	var recipes []*model.Recipe
 	elementTiers := make(ElementTierMap)
 	currentTier := -1
@@ -25,11 +23,12 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 			return
 		}
 
-		// Membuat konfigurasi tier
+		// Catat tier dari section 
 		if strings.Contains(sectionID, "Starting_elements") || strings.Contains(sectionID, "Special_element") {
 			currentTier = 0
 		} else if strings.HasPrefix(sectionID, "Tier_") {
-			// Mengambil tier dari id. contoh: "Tier_1_elements" -> 1
+
+			// Ambil tier dari judul 
 			tierParts := strings.Split(sectionID, "_")
 			if len(tierParts) >= 2 {
 				tierNum, err := strconv.Atoi(tierParts[1])
@@ -37,6 +36,7 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 					currentTier = tierNum
 				}
 			}
+
 		} else {
 			return
 		}
@@ -71,7 +71,7 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 			liFound := false
 			tds.Eq(1).Find("li").Each(func(_ int, li *goquery.Selection) {
 				text := strings.TrimSpace(li.Text())
-				if strings.Contains(text, "+") && !(element == "Earth" || element == "Air" || element == "Fire" || element == "Water" || element == "Time") {
+				if strings.Contains(text, "+") {
 
 					// Pisahkan berdasarkan '+' dalam <li>
 					parts := strings.Split(text, "+")
@@ -80,13 +80,7 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 					if len(parts) == 2 {
 						item1 = strings.TrimSpace(parts[0])
 						item2 = strings.TrimSpace(parts[1])
-						tier1, ok1 := elementTiers[item1]
-						tier2, ok2 := elementTiers[item2]
-						if ok1 && ok2 {
-							if tier1 < currentTier && tier2 < currentTier {
-								recipes = append(recipes, model.NewRecipe(element, item1, item2))
-							}
-						}
+						recipes = append(recipes, model.NewRecipe(element, item1, item2))
 					}
 
 					liFound = true
@@ -94,7 +88,7 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 			})
 
 			// Tidak ada '+' dalam <li>, berarti elemen spesial
-			if !liFound {
+			if !liFound || (element == "Earth" || element == "Air" || element == "Fire" || element == "Water" || element == "Time") {
 				recipes = append(recipes, model.NewRecipe(element, "", ""))
 			}
 		})
@@ -104,5 +98,5 @@ func ParseHTML(doc *goquery.Document) ([]*model.Recipe, error) {
 	})
 
 	fmt.Println("HTML terbaca")
-	return recipes, nil
+	return recipes, elementTiers, nil
 }

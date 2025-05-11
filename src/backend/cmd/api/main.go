@@ -9,7 +9,7 @@ import (
 func main() {
 
 	// Initialize repository
-	repo, err := repo.NewRepository("data/alchemy.db", "data/alchemy.csv")
+	repo, err := repo.NewRepository("data/alchemy.db", "data/alchemy.csv", "data/tiers.json")
 	if err != nil {
 		log.Fatalf("failed to initialize repository")
 	}

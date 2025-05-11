@@ -18,7 +18,7 @@ func NewScraper() *Scraper {
 	}
 }
 
-func (ws *Scraper) Scrape(htmlPath, csvPath, dbPath string) error {
+func (ws *Scraper) Scrape(htmlPath, csvPath, dbPath, jsonPath string) error {
 
 	// Open file HTML lokal
 	file, err := os.Open(htmlPath)
@@ -36,18 +36,23 @@ func (ws *Scraper) Scrape(htmlPath, csvPath, dbPath string) error {
 	}
 
 	// Ambil recipe
-	recipes, err := ParseHTML(doc)
+	recipes, elementTiers, err := ParseHTML(doc)
 	if err != nil {
 		return err
 	}
 
-	// Simpan ke CSV
+	// Simpan recipes ke CSV
 	if err := ws.store.SaveToCSV(recipes, csvPath); err != nil {
 		return err
 	}
 	
-	// Simpan ke SQLite database
+	// Simpan recipes ke SQLite database
 	if err := ws.store.SaveToDB(recipes, dbPath); err != nil {
+		return err
+	}
+
+	// Simpan tiers ke json
+	if err:= ws.store.SaveMap(elementTiers, jsonPath); err != nil {
 		return err
 	}
 
