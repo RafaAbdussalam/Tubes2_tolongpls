@@ -1,11 +1,11 @@
 package tree
 
 import (
+	"fmt"
 	"little_alchemy_backend/internal/model"
 	"little_alchemy_backend/internal/repo"
 	"sync"
 	"time"
-	"fmt"
 )
 
 type DFSBuilder struct {
@@ -58,7 +58,7 @@ func (b *DFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
         fmt.Println("Pruning dinonaktifkan untuk menampilkan semua jalur yang ditemukan.")
     } else {
         // Lakukan pruning hanya jika root memiliki recipe count positif
-        model.PruneTree(tree.Root)
+        tree.PruneTree()
     }
 	
 	tree.NodeCount = b.countTreeNodes(tree.Root)
@@ -67,7 +67,7 @@ func (b *DFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 	tree.Time = int(time.Since(startTime).Milliseconds())
 	
 	// Set RecipeCount di RecipeTree
-	model.SetRecipeCount(tree)
+	tree.SetRecipeCount()
 	
 	return tree, nil
 }
@@ -104,14 +104,14 @@ func (b *DFSBuilder) buildDFSRecursive(node *model.ElementNode, depth int) error
 		}
 
 		// Buat node elemen untuk bahan-bahan
-		item1Node := model.NewElementNode(recipe.Item1, depth+1)
-		item2Node := model.NewElementNode(recipe.Item2, depth+1)
+		item1Node := model.NewElementNode(recipe.Item1, recipeNode, depth+1)
+		item2Node := model.NewElementNode(recipe.Item2, recipeNode, depth+1)
 
 		// Hubungkan node resep ke node bahan
 		recipeNode.Item1 = item1Node
 		recipeNode.Item2 = item2Node
-		item1Node.Parent = recipeNode
-		item2Node.Parent = recipeNode
+		item1Node.ParentRecipe = recipeNode
+		item2Node.ParentRecipe = recipeNode
 
 		// Tambahkan node resep ke bahan elemen saat ini
 		node.Ingredients = append(node.Ingredients, recipeNode)
@@ -190,14 +190,14 @@ func (b *DFSBuilder) processIngredientThreadSafe(node *model.ElementNode, visite
 	}
 	
 	// Buat node elemen untuk bahan-bahan
-	item1Node := model.NewElementNode(recipe.Item1, depth+1)
-	item2Node := model.NewElementNode(recipe.Item2, depth+1)
+	item1Node := model.NewElementNode(recipe.Item1, recipeNode, depth+1)
+	item2Node := model.NewElementNode(recipe.Item2, recipeNode, depth+1)
 	
 	// Hubungkan node resep ke node bahan
 	recipeNode.Item1 = item1Node
 	recipeNode.Item2 = item2Node
-	item1Node.Parent = recipeNode
-	item2Node.Parent = recipeNode
+	item1Node.ParentRecipe = recipeNode
+	item2Node.ParentRecipe = recipeNode
 	
 	// Tambahkan node resep ke bahan elemen saat ini
 	node.Ingredients = append(node.Ingredients, recipeNode)
@@ -261,14 +261,14 @@ func (b *DFSBuilder) buildMultipleRecipes(rootNode *model.ElementNode, amount in
 			}
 			
 			// Buat node elemen untuk bahan-bahan
-			item1Node := model.NewElementNode(r.Item1, 1)
-			item2Node := model.NewElementNode(r.Item2, 1)
+			item1Node := model.NewElementNode(r.Item1, recipeNode, 1)
+			item2Node := model.NewElementNode(r.Item2, recipeNode, 1)
 			
 			// Hubungkan node resep ke node bahan
 			recipeNode.Item1 = item1Node
 			recipeNode.Item2 = item2Node
-			item1Node.Parent = recipeNode
-			item2Node.Parent = recipeNode
+			item1Node.ParentRecipe = recipeNode
+			item2Node.ParentRecipe = recipeNode
 			
 			// Buat salinan visited map untuk thread ini
 			localVisited := make(map[string]bool)
@@ -324,13 +324,13 @@ func (b *DFSBuilder) calculateRecipeCount(node *model.ElementNode) int {
 		
 		// Recipe count adalah perkalian dari recipe count bahan-bahannya
 		recipeCount := item1Count * item2Count
-		recipe.RecipeCount = recipeCount
+		recipe.RecipeCount = uint64(recipeCount)
 		
 		// Total count adalah penjumlahan dari semua resep
 		totalCount += recipeCount
 	}
 	
-	node.RecipeCount = totalCount
+	node.RecipeCount = uint64(totalCount)
 	return totalCount
 }
 

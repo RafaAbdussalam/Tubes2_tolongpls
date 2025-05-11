@@ -63,7 +63,7 @@ func NewRouter(repo *repo.RecipeRepository) *gin.Engine {
 		}
 
 		// Set Recipe Count
-		model.SetRecipeCount(recipeTree)
+		recipeTree.SetRecipeCount()
 
 		// Send tree
 		fmt.Println(recipeTree.String())

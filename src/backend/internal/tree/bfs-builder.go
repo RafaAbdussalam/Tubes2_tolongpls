@@ -3,6 +3,7 @@ package tree
 import (
 	"little_alchemy_backend/internal/model"
 	"little_alchemy_backend/internal/repo"
+	"sync"
 	"time"
 )
 
@@ -13,11 +14,17 @@ type BFSBuilder struct {
 func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTree, error) {
 
 	start := time.Now()
+	
+	var (
+		wg sync.WaitGroup
+		mu sync.Mutex
+	)
+
 	tree := model.NewTree(rootElement, model.BFS) // Start tree
 	queue := model.NewQueue(tree.Root)            // Add root to queue
 
 	// Loop through queue
-	for !queue.IsEmpty() && tree.Root.RecipeCount < amount {
+	for !queue.IsEmpty() && tree.RecipeCount < uint64(amount) {
 		current := queue.Pop()
 
 		if current.IsPrimary {
@@ -31,49 +38,56 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 
 		// Make new recipe node for each recipe
 		for _, recipe := range recipes {
+			wg.Add(1)
 
-			// New element node
-			item1 := model.NewElementNode(recipe.Item1, current.Depth+1)
-			item2 := model.NewElementNode(recipe.Item2, current.Depth+1)
+			go func(recipe *model.Recipe) {
+				defer wg.Done()
 
-			// New recipe node
-			recipeNode := &model.RecipeNode{
-				ParentElement: current,
-				Item1:         item1,
-				Item2:         item2,
-				RecipeCount:   item1.RecipeCount * item2.RecipeCount,
-			}
+				// New element node
+				item1 := model.NewElementNode(recipe.Item1, nil, current.Depth + 1)
+				item2 := model.NewElementNode(recipe.Item2, nil, current.Depth + 1)
 
-			current.Ingredients = append(current.Ingredients, recipeNode)
+				// New recipe node
+				recipeNode := model.NewRecipeNode(item1, item2, current)
+				item1.ParentRecipe = recipeNode
+				item2.ParentRecipe = recipeNode
 
-			// Update NodeCount
-			tree.NodeCount += 2
-			if item1.Depth > tree.Depth {
-				tree.Depth = item1.Depth
-			}
+				mu.Lock()
+				defer mu.Unlock()
 
-			// Update parent recipe node
-			item1.Parent = recipeNode
-			item2.Parent = recipeNode
-			model.BubbleCount(nil, recipeNode)
+				// New ingredient
+				current.Ingredients = append(current.Ingredients, recipeNode)
 
-			// Stop if found enough recipes
-			if tree.Root.RecipeCount == amount {
-				model.PruneTree(tree.Root)
-				elapsed := time.Since(start)
-				tree.Time = int(elapsed)
-				return tree, nil
-			}
+				// Update Node Count
+				tree.NodeCount += 2
+				if item1.Depth > tree.Depth {
+					tree.Depth = item1.Depth
+				}
 
-			queue.Push(item1)
-			queue.Push(item2)
+				// Recount recipes
+				tree.CountRecipes(current)
+
+				// Stop if found enough recipes
+				if tree.RecipeCount == uint64(amount) {
+					return
+				}
+
+				queue.Push(item1)
+				queue.Push(item2)
+
+			}(recipe)
 		}
+
+		wg.Wait()
 	}
 
-	// Furbish tree
-	model.PruneTree(tree.Root)
+	// Polish tree
+	tree.TrimTree(amount)
+	tree.PruneTree()
+
+	// Time tree
 	elapsed := time.Since(start)
-	tree.Time = int(elapsed)
+	tree.Time = int(elapsed.Milliseconds())
 
 	return tree, nil
 

@@ -1,0 +1,2651 @@
+{
+  "algorithm": "bfs",
+  "depth": 12,
+  "node_count": 307065,
+  "recipe_count": 1,
+  "time": 17869,
+  "tree_data": {
+    "element": "Fork",
+    "children": [
+      {
+        "item_1": {
+          "element": "Pitchfork",
+          "children": [
+            {
+              "item_1": {
+                "element": "Hay",
+                "children": [
+                  {
+                    "item_1": {
+                      "element": "Grass",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Plant",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Life",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Primordial soup",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Planet",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Sea",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Volcano",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Lava",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Soil",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Earth",
+                                        "children": []
+                                      },
+                                      "item_2": {
+                                        "element": "Life",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Planet",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Continent",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Continent",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Sea",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Lake",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Pond",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Lake",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Pond",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Volcano",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Lava",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Fire",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Earth",
+                            "children": []
+                          }
+                        }
+                      ]
+                    },
+                    "item_2": {
+                      "element": "Sun",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Planet",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Continent",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Land",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Land",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Continent",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Land",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Land",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Fire",
+                            "children": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "item_2": {
+                "element": "Steel",
+                "children": [
+                  {
+                    "item_1": {
+                      "element": "Metal",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Stone",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Earth",
+                                  "children": []
+                                },
+                                "item_2": {
+                                  "element": "Pressure",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Air",
+                                        "children": []
+                                      },
+                                      "item_2": {
+                                        "element": "Air",
+                                        "children": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Fire",
+                            "children": []
+                          }
+                        }
+                      ]
+                    },
+                    "item_2": {
+                      "element": "Coal",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Pressure",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Air",
+                                  "children": []
+                                },
+                                "item_2": {
+                                  "element": "Air",
+                                  "children": []
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Organic matter",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Bacteria",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Life",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Planet",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Continent",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Continent",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Sea",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Lake",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Pond",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Lake",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Pond",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Volcano",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Lava",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Fire",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Primordial soup",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Planet",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Sea",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Death",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Time",
+                                        "children": []
+                                      },
+                                      "item_2": {
+                                        "element": "Life",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Sea",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Lake",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Pond",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Pond",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Puddle",
+                                                                      "children": [
+                                                                        {
+                                                                          "item_1": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          },
+                                                                          "item_2": {
+                                                                            "element": "Water",
+                                                                            "children": []
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Energy",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "item_2": {
+          "element": "Small",
+          "children": [
+            {
+              "item_1": {
+                "element": "Philosophy",
+                "children": [
+                  {
+                    "item_1": {
+                      "element": "Human",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Clay",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Mud",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Water",
+                                        "children": []
+                                      },
+                                      "item_2": {
+                                        "element": "Earth",
+                                        "children": []
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Stone",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Earth",
+                                        "children": []
+                                      },
+                                      "item_2": {
+                                        "element": "Pressure",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Air",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Air",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Life",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Primordial soup",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Planet",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Continent",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Continent",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Sea",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Lake",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Pond",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Water",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Lake",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Pond",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Water",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Volcano",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Lava",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Fire",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Earth",
+                                        "children": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "item_2": {
+                      "element": "Idea",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Human",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Clay",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Mud",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Water",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Stone",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Pressure",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Air",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Air",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Life",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Primordial soup",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Planet",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Sea",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Volcano",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Lava",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Light bulb",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Glass",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Sand",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Stone",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Pressure",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Air",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Air",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Air",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Fire",
+                                        "children": []
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Electricity",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Solar cell",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Sun",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Planet",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Continent",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Continent",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Land",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Earth",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Energy",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Sun",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Planet",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Fire",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "item_2": {
+                "element": "Carbon dioxide",
+                "children": [
+                  {
+                    "item_1": {
+                      "element": "Plant",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Life",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Primordial soup",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Planet",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Continent",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Continent",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Land",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Earth",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Sea",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Lake",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Pond",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Water",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Lake",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Pond",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Water",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Water",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Volcano",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Lava",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Earth",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Fire",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Earth",
+                                        "children": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "item_2": {
+                            "element": "Soil",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Earth",
+                                  "children": []
+                                },
+                                "item_2": {
+                                  "element": "Life",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Primordial soup",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Planet",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Continent",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Land",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Earth",
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Sea",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "item_1": {
+                                                          "element": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "item_1": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              },
+                                                              "item_2": {
+                                                                "element": "Puddle",
+                                                                "children": [
+                                                                  {
+                                                                    "item_1": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    },
+                                                                    "item_2": {
+                                                                      "element": "Water",
+                                                                      "children": []
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item_2": {
+                                                          "element": "Water",
+                                                          "children": []
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Volcano",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Lava",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Fire",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Earth",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "item_2": {
+                      "element": "Night",
+                      "children": [
+                        {
+                          "item_1": {
+                            "element": "Time",
+                            "children": []
+                          },
+                          "item_2": {
+                            "element": "Moon",
+                            "children": [
+                              {
+                                "item_1": {
+                                  "element": "Stone",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Earth",
+                                        "children": []
+                                      },
+                                      "item_2": {
+                                        "element": "Pressure",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Air",
+                                              "children": []
+                                            },
+                                            "item_2": {
+                                              "element": "Air",
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "item_2": {
+                                  "element": "Planet",
+                                  "children": [
+                                    {
+                                      "item_1": {
+                                        "element": "Continent",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Land",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Land",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "item_2": {
+                                        "element": "Continent",
+                                        "children": [
+                                          {
+                                            "item_1": {
+                                              "element": "Land",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            "item_2": {
+                                              "element": "Land",
+                                              "children": [
+                                                {
+                                                  "item_1": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  },
+                                                  "item_2": {
+                                                    "element": "Earth",
+                                                    "children": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
