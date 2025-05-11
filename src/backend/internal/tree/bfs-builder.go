@@ -24,7 +24,7 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 	queue := model.NewQueue(tree.Root)            // Add root to queue
 
 	// Loop through queue
-	for !queue.IsEmpty() && tree.RecipeCount < amount {
+	for !queue.IsEmpty() && tree.RecipeCount < uint64(amount) {
 		current := queue.Pop()
 
 		if current.IsPrimary {
@@ -68,7 +68,7 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 				tree.CountRecipes(current)
 
 				// Stop if found enough recipes
-				if tree.Root.RecipeCount == amount {
+				if tree.RecipeCount == uint64(amount) {
 					return
 				}
 

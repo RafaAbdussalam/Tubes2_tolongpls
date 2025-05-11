@@ -7,15 +7,15 @@ type ElementNode struct {
 	ParentRecipe *RecipeNode   `json:"-"`
 	IsPrimary    bool          `json:"-"`
 	Depth        int           `json:"-"`
-	RecipeCount  int           `json:"-"`
+	RecipeCount  uint64        `json:"-"`
 }
 
 type RecipeNode struct {
 	Item1         *ElementNode `json:"item_1"`
 	Item2         *ElementNode `json:"item_2"`
 	ParentElement *ElementNode `json:"-"`
-	Depth        int           `json:"-"`
-	RecipeCount   int          `json:"-"`
+	Depth         int          `json:"-"`
+	RecipeCount   uint64       `json:"-"`
 }
 
 // Constructor
@@ -26,7 +26,7 @@ func NewElementNode(name string, ParentRecipe *RecipeNode, depth int) *ElementNo
 		ParentRecipe: ParentRecipe,
 		IsPrimary:    isPrimary,
 		Depth:        depth,
-		RecipeCount:  boolToInt(isPrimary),
+		RecipeCount:  uint64(boolToInt(isPrimary)),
 	}
 }
 

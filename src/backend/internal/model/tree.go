@@ -11,7 +11,7 @@ type RecipeTree struct {
 	Mode      	Traversal    	`json:"algorithm"`
 	Depth     	int          	`json:"depth"`
 	NodeCount 	int        		`json:"node_count"`
-	RecipeCount int 				`json:"recipe_count"`
+	RecipeCount uint64 			`json:"recipe_count"`
 	Time 			int 				`json:"time"`
 	Root      	*ElementNode 	`json:"tree_data"`
 }
@@ -27,11 +27,11 @@ func NewTree(root string, mode Traversal) *RecipeTree {
 }
 
 func (tree *RecipeTree) SetRecipeCount() {
-	tree.RecipeCount = tree.Root.RecipeCount
+	tree.RecipeCount = uint64(tree.Root.RecipeCount)
 }
 
 // Recount recipes in tree
-func (tree *RecipeTree) CountRecipes(node *ElementNode) int {
+func (tree *RecipeTree) CountRecipes(node *ElementNode) uint64 {
 	bubbleNodes(node)
 	tree.SetRecipeCount()
 	return tree.RecipeCount
@@ -59,7 +59,7 @@ func bubbleNodes(node *ElementNode) {
 	}
 
 	// Recount element node
-	count := int(0)
+	count := uint64(0)
 	for _, recipe := range node.Ingredients {
 		count += recipe.RecipeCount
 	}
@@ -102,7 +102,7 @@ func pruneNode(node *ElementNode) {
 
 // Trims tree to have correct recipe count
 func (tree *RecipeTree) TrimTree(amount int) {
-	if tree.RecipeCount <= amount {
+	if tree.RecipeCount <= uint64(amount) {
 		return
 	}
 	
@@ -116,7 +116,7 @@ func (tree *RecipeTree) TrimTree(amount int) {
 	
 	// Remove leaves until correct count is reached
 	for _, leaf := range leaves {
-		if tree.RecipeCount == amount {
+		if tree.RecipeCount == uint64(amount) {
 			break 
 		}
 		
@@ -124,8 +124,8 @@ func (tree *RecipeTree) TrimTree(amount int) {
 		leaf.RecipeCount = 0
 		tree.CountRecipes(leaf.ParentElement)
 
-		// Remove removal if undershoot  
-		if tree.RecipeCount < amount {
+		// Undo removal if undershoot  
+		if tree.RecipeCount < uint64(amount) {
 			bubbleRecipes(leaf)
 			tree.SetRecipeCount() 
 		}
@@ -138,7 +138,7 @@ func getLeafRecipes(node *ElementNode) []*RecipeNode {
 	var leaves []*RecipeNode
 
 	for _, recipe := range node.Ingredients {
-		if recipe.Item1.IsPrimary && recipe.Item2.IsPrimary && recipe.RecipeCount > 0 {
+		if recipe.RecipeCount > 0 && recipe.Item1.IsPrimary && recipe.Item2.IsPrimary {
 
 			// Found a leaf 
 			leaves = append(leaves, recipe)
@@ -148,7 +148,7 @@ func getLeafRecipes(node *ElementNode) []*RecipeNode {
 			// Recursively get leaves 
 			leaves = append(leaves, getLeafRecipes(recipe.Item1)...)
 			leaves = append(leaves, getLeafRecipes(recipe.Item2)...)
-
+			
 		}
 	}
 	

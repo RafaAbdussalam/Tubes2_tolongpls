@@ -324,13 +324,13 @@ func (b *DFSBuilder) calculateRecipeCount(node *model.ElementNode) int {
 		
 		// Recipe count adalah perkalian dari recipe count bahan-bahannya
 		recipeCount := item1Count * item2Count
-		recipe.RecipeCount = recipeCount
+		recipe.RecipeCount = uint64(recipeCount)
 		
 		// Total count adalah penjumlahan dari semua resep
 		totalCount += recipeCount
 	}
 	
-	node.RecipeCount = totalCount
+	node.RecipeCount = uint64(totalCount)
 	return totalCount
 }
 
