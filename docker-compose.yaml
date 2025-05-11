@@ -1,12 +1,11 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  
   # Service tambahan untuk development
   scraper:
     build: ./src/backend
     command: /app/scraper
-  
+
   # Backend service
   backend:
     build: ./src/backend
@@ -16,7 +15,7 @@ services:
     environment:
       - GIN_MODE=release
     restart: unless-stopped
-  
+
   # Frontend service
   frontend:
     build: ./src/frontend
