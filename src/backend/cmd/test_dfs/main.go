@@ -253,15 +253,15 @@ func PrintPathToRoot(node *model.ElementNode) {
 	path := []string{node.Element}
 	current := node
 	
-	for current.Parent != nil && current.Parent.ParentElement != nil {
-		parentElement := current.Parent.ParentElement
+	for current.ParentRecipe != nil && current.ParentRecipe.ParentElement != nil {
+		parentElement := current.ParentRecipe.ParentElement
 
-		if current.Parent.Item1 == current {
+		if current.ParentRecipe.Item1 == current {
 			path = append(path, fmt.Sprintf("%s + %s -> %s", 
-				current.Element, current.Parent.Item2.Element, parentElement.Element))
+				current.Element, current.ParentRecipe.Item2.Element, parentElement.Element))
 		} else {
 			path = append(path, fmt.Sprintf("%s + %s -> %s", 
-				current.Parent.Item1.Element, current.Element, parentElement.Element))
+				current.ParentRecipe.Item1.Element, current.Element, parentElement.Element))
 		}
 		current = parentElement
 	}

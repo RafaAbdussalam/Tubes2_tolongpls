@@ -2,70 +2,157 @@ package model
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 )
 
 // Tree
 type RecipeTree struct {
-	Mode        Traversal    `json:"algorithm"`
-	Depth       int          `json:"depth"`
-	NodeCount   int          `json:"node_count"`
-	RecipeCount int          `json:"recipe_count"`
-	Time        int          `json:"time"`
-	Root        *ElementNode `json:"tree_data"`
+	Mode      	Traversal    	`json:"algorithm"`
+	Depth     	int          	`json:"depth"`
+	NodeCount 	int        		`json:"node_count"`
+	RecipeCount int 				`json:"recipe_count"`
+	Time 			int 				`json:"time"`
+	Root      	*ElementNode 	`json:"tree_data"`
 }
 
-func NewTree(rootElement string, mode Traversal) *RecipeTree {
+func NewTree(root string, mode Traversal) *RecipeTree {
 	return &RecipeTree{
-		Root:      NewElementNode(rootElement, 0),
-		Depth:     0,
-		NodeCount: 1,
-		Mode:      mode,
+		Root:      		NewElementNode(root, nil, 0),
+		Depth:     		0,
+		NodeCount: 		1,
+		RecipeCount: 	0,
+		Mode:      		mode,
 	}
 }
 
-// Set RecipeCount in RecipeTree
-func SetRecipeCount(recipeTree *RecipeTree) {
-	recipeTree.RecipeCount = recipeTree.Root.RecipeCount
+func (tree *RecipeTree) SetRecipeCount() {
+	tree.RecipeCount = tree.Root.RecipeCount
 }
 
-// Update recipe count
-func BubbleCount(elementNode *ElementNode, recipeNode *RecipeNode) {
-	if elementNode == nil && recipeNode == nil {
+// Recount recipes in tree
+func (tree *RecipeTree) CountRecipes(node *ElementNode) int {
+	bubbleNodes(node)
+	tree.SetRecipeCount()
+	return tree.RecipeCount
+}
+
+// Recount recipes starting from recipe node
+func bubbleRecipes(node *RecipeNode) {
+	if node == nil {
+		return
+	}	
+
+	// Recount recipe node
+	node.RecipeCount = node.Item1.RecipeCount * node.Item2.RecipeCount
+
+	// Recount parent element node
+	if node.ParentElement != nil {
+		bubbleNodes(node.ParentElement)
+	}
+}
+
+// Recount recipes starting from element node
+func bubbleNodes(node *ElementNode) {
+	if node == nil {
 		return
 	}
-	if elementNode != nil {
-		newCount := int(0)
-		for _, ingredient := range elementNode.Ingredients {
-			newCount += ingredient.RecipeCount
-		}
-		elementNode.RecipeCount = newCount
-		BubbleCount(nil, elementNode.Parent)
-	} else if recipeNode != nil {
-		recipeNode.RecipeCount = recipeNode.Item1.RecipeCount * recipeNode.Item2.RecipeCount
-		BubbleCount(recipeNode.ParentElement, nil)
+
+	// Recount element node
+	count := int(0)
+	for _, recipe := range node.Ingredients {
+		count += recipe.RecipeCount
+	}
+	node.RecipeCount = count
+
+	// Recount parent recipe node
+	if node.ParentRecipe != nil {
+		bubbleRecipes(node.ParentRecipe)
 	}
 }
 
-// Trim nodes with zero count
-func PruneTree(elementNode *ElementNode) {
-	if elementNode == nil {
+// Prune tree to have no zero recipe count nodes
+func (tree RecipeTree) PruneTree() {
+	pruneNode(tree.Root)
+}
+
+// Prune starting from this node
+func pruneNode(node *ElementNode) {
+	if node == nil {
 		return
 	}
 
-	trimmed := make([]*RecipeNode, 0, len(elementNode.Ingredients))
-	for _, recipe := range elementNode.Ingredients {
+	trimmed := make([]*RecipeNode, 0, len(node.Ingredients))
+	for _, recipe := range node.Ingredients {
+
+		// Trim useless recipes nodes
 		if recipe == nil || recipe.RecipeCount == 0 {
 			continue
 		}
 
-		PruneTree(recipe.Item1)
-		PruneTree(recipe.Item2)
+		pruneNode(recipe.Item1)
+		pruneNode(recipe.Item2)
 
+		// Keep node otherwise
 		trimmed = append(trimmed, recipe)
 	}
 
-	elementNode.Ingredients = trimmed
+	node.Ingredients = trimmed
+}
+
+// Trims tree to have correct recipe count
+func (tree *RecipeTree) TrimTree(amount int) {
+	if tree.RecipeCount <= amount {
+		return
+	}
+	
+	// Get leaf nodes 
+	leaves := getLeafRecipes(tree.Root)
+	
+	// Sort leaves from deepest 
+	sort.SliceStable(leaves, func(i, j int) bool {
+		return leaves[i].Depth > leaves[j].Depth // deeper first
+	})
+	
+	// Remove leaves until correct count is reached
+	for _, leaf := range leaves {
+		if tree.RecipeCount == amount {
+			break 
+		}
+		
+		// Simulate removing leaf 
+		leaf.RecipeCount = 0
+		tree.CountRecipes(leaf.ParentElement)
+
+		// Remove removal if undershoot  
+		if tree.RecipeCount < amount {
+			bubbleRecipes(leaf)
+			tree.SetRecipeCount() 
+		}
+
+	}
+}
+
+// Get leaf recipe nodes (with primary children) from given node
+func getLeafRecipes(node *ElementNode) []*RecipeNode {
+	var leaves []*RecipeNode
+
+	for _, recipe := range node.Ingredients {
+		if recipe.Item1.IsPrimary && recipe.Item2.IsPrimary && recipe.RecipeCount > 0 {
+
+			// Found a leaf 
+			leaves = append(leaves, recipe)
+
+		} else {
+
+			// Recursively get leaves 
+			leaves = append(leaves, getLeafRecipes(recipe.Item1)...)
+			leaves = append(leaves, getLeafRecipes(recipe.Item2)...)
+
+		}
+	}
+	
+	return leaves
 }
 
 // Type of Traversal
@@ -77,14 +164,18 @@ const (
 	Bidirectional Traversal = "bd"
 )
 
-// Print Tree Method
+// Print recipe tree
 func (t *RecipeTree) String() string {
 	var sb strings.Builder
 	t.printNode(&sb, t.Root, 0)
-	sb.WriteString(fmt.Sprintf("\nTree (Mode: %s, Depth: %d, Nodes: %d, Recipes: %v, Time: %v)\n\n", t.Mode, t.Depth, t.NodeCount, t.RecipeCount, t.Time))
+	sb.WriteString(fmt.Sprintf(
+		"\nTree (Mode: %s, Depth: %d, Nodes: %d, Recipes: %v, Time: %vms)\n\n", 
+		t.Mode, t.Depth, t.NodeCount, t.Root.RecipeCount, t.Time,
+	))
 	return sb.String()
 }
 
+// Print recipe tree data 
 func (t *RecipeTree) printNode(sb *strings.Builder, node *ElementNode, indentLevel int) {
 	indent := strings.Repeat("  ", indentLevel)
 
