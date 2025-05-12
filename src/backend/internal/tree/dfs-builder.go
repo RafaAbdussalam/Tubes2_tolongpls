@@ -64,7 +64,7 @@ func (b *DFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
         tree.PruneTree()
     }
 
-    tree.NodeCount = b.countTreeNodes(tree.Root)
+    tree.NodeCount =  b.nodeCount
     tree.Depth = b.maxDepth
    
     // Set waktu eksekusi
@@ -110,7 +110,8 @@ func (b *DFSBuilder) buildSingleFullPath(node *model.ElementNode, depth int) err
 
     node.Ingredients = append(node.Ingredients, recipeNode)
 
-    b.nodeCount += 2
+	b.nodeCount += 2
+	b.maxDepth += 1
     if !item1Node.IsPrimary {
         // Reset visited untuk memastikan jalur lengkap
         if err := b.buildSingleFullPath(item1Node, depth+1); err != nil {
@@ -128,13 +129,10 @@ func (b *DFSBuilder) buildSingleFullPath(node *model.ElementNode, depth int) err
     } else {
         item2Node.RecipeCount = 1
     }
-
-
     return nil
 }
 
 func (b *DFSBuilder) processFullPath(node *model.ElementNode, depth int, resultMutex *sync.Mutex) {
-    // Update kedalaman maksimum dengan aman
     resultMutex.Lock()
     if depth > b.maxDepth {
         b.maxDepth = depth
@@ -252,12 +250,10 @@ func (b *DFSBuilder) calculateRecipeCount(node *model.ElementNode) int {
     totalCount := 0
 
     for _, recipe := range node.Ingredients {
-        // Periksa null pointer
         if recipe == nil || recipe.Item1 == nil || recipe.Item2 == nil {
             continue
         }
-       
-        // Hitung recipe count untuk kedua bahan
+
         item1Count := b.calculateRecipeCount(recipe.Item1)
         item2Count := b.calculateRecipeCount(recipe.Item2)
 
@@ -274,29 +270,6 @@ func (b *DFSBuilder) calculateRecipeCount(node *model.ElementNode) int {
    
     node.RecipeCount = uint64(totalCount)
     return totalCount
-}
-
-func (b *DFSBuilder) countTreeNodes(node *model.ElementNode) int {
-    if node == nil {
-        return 0
-    }
-   
-    count := 1
-   
-    for _, recipe := range node.Ingredients {
-        count++
-
-        if recipe.Item1 != nil {
-            count += b.countTreeNodes(recipe.Item1)
-        }
-       
-        // Count item2 subtree
-        if recipe.Item2 != nil {
-            count += b.countTreeNodes(recipe.Item2)
-        }
-    }
-   
-    return count
 }
 
 func (b *DFSBuilder) countNodesRecursive(recipeNode *model.RecipeNode) int {
