@@ -27,7 +27,7 @@ func NewTree(root string, mode Traversal) *RecipeTree {
 }
 
 func (tree *RecipeTree) SetRecipeCount() {
-	tree.RecipeCount = uint64(tree.Root.RecipeCount)
+	tree.RecipeCount = tree.Root.RecipeCount
 }
 
 // Recount recipes in tree

@@ -1,6 +1,7 @@
 package tree
 
 import (
+	"context"
 	"little_alchemy_backend/internal/model"
 	"little_alchemy_backend/internal/repo"
 	"sync"
@@ -15,33 +16,52 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 
 	start := time.Now()
 	
+	// Multithreading tools
 	var (
 		wg sync.WaitGroup
 		mu sync.Mutex
 	)
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
 
 	tree := model.NewTree(rootElement, model.BFS) // Start tree
 	queue := model.NewQueue(tree.Root)            // Add root to queue
 
 	// Loop through queue
-	for !queue.IsEmpty() && tree.RecipeCount < uint64(amount) {
+	for !queue.IsEmpty() {
+
+		// Stop if recipe count exceeded
+		if ctx.Err() != nil || tree.RecipeCount >= uint64(amount) {
+			break
+		}
+
+		// Pop node from queue
 		current := queue.Pop()
 
+		// Skip primary element
 		if current.IsPrimary {
 			continue
 		}
 
+		// Get recipes for current element
 		recipes, err := b.repo.GetRecipesFor(current.Element)
 		if err != nil {
+			cancel()
+			wg.Wait()
 			return nil, err
 		}
 
 		// Make new recipe node for each recipe
 		for _, recipe := range recipes {
+
 			wg.Add(1)
 
 			go func(recipe *model.Recipe) {
 				defer wg.Done()
+				
+				if ctx.Err() != nil {
+					return
+				}
 
 				// New element node
 				item1 := model.NewElementNode(recipe.Item1, nil, current.Depth + 1)
@@ -58,17 +78,22 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 				// New ingredient
 				current.Ingredients = append(current.Ingredients, recipeNode)
 
-				// Update Node Count
+				// Update node count
 				tree.NodeCount += 2
+
+				// Update depth
 				if item1.Depth > tree.Depth {
 					tree.Depth = item1.Depth
 				}
 
 				// Recount recipes
-				tree.CountRecipes(current)
+				if item1.IsPrimary || item2.IsPrimary {
+					tree.CountRecipes(current)
+				}
 
 				// Stop if found enough recipes
-				if tree.RecipeCount == uint64(amount) {
+				if tree.RecipeCount >= uint64(amount) {
+					cancel()
 					return
 				}
 
