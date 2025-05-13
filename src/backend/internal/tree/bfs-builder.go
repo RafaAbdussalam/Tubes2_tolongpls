@@ -87,7 +87,7 @@ func (b *BFSBuilder) BuildTree(rootElement string, amount int) (*model.RecipeTre
 				}
 
 				// Recount recipes
-				if item1.IsPrimary || item2.IsPrimary {
+				if item1.IsPrimary && item2.IsPrimary {
 					tree.CountRecipes(current)
 				}
 
