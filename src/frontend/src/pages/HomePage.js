@@ -4,10 +4,6 @@ import RecipeResults from '../components/RecipeResults/RecipeResults';
 import { fetchRecipe } from '../utils/api';
 import '../styles/HomePage.css';
 
-// untuk uji coba tanpa API
-// import data1 from '../utils/contoh1.json';
-// import data2 from '../utils/contoh2.json';
-
 function HomePage() {
     // State management
     const [searchTerm, setSearchTerm] = useState('');
@@ -19,7 +15,6 @@ function HomePage() {
     const [isLoading, setIsLoading] = useState(false);
     
     // Handlers
-    // ini siap dicoba sama API
     function handleSearchSubmit(e) {
         e.preventDefault();
         if (!searchTerm.trim()) return;
@@ -34,33 +29,19 @@ function HomePage() {
         .catch(console.error)
         .finally(() => setIsLoading(false));
     };
+            
+    function handleReset() {
+        setSearchTerm('');
+        setAlgorithm('bfs');
+        setMode('single');
+        setModeSubmitted('single');
+        setMaxPaths(2);
+        setResults(null);
+        setIsLoading(false);
+    };
     
-    // dummy data
-    // function handleSearchSubmit(e) {
-        //     e.preventDefault();
-        //     if (!searchTerm.trim()) return;
-        
-        //     setIsLoading(true);
-        //     if (searchTerm.length % 2 === 1) {
-            //         setResults(data1);
-            //     } else {
-                //         setResults(data2);
-                //     }
-                //     setIsLoading(false);
-                // }
-                
-                function handleReset() {
-                    setSearchTerm('');
-                    setAlgorithm('bfs');
-                    setMode('single');
-                    setModeSubmitted('single');
-                    setMaxPaths(2);
-                    setResults(null);
-                    setIsLoading(false);
-                };
-                
-                return (
-                    <div className="home-page">
+    return (
+        <div className="home-page">
             <h1>Little Alchemy Recipe Finder</h1>
             
             <SearchControls
