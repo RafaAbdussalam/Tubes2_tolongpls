@@ -1,9 +1,13 @@
 Element,Item1,Item2
 Air,Fire,Mist
+Air,,
+Earth,,
 Fire,Fire,Alcohol
 Fire,Fire,Coal
+Fire,,
 Water,Heat,Ice
 Water,Heat,Snow
+Water,,
 Time,,
 Dust,Earth,Air
 Dust,Soil,Air

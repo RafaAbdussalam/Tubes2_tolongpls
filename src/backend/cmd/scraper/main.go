@@ -12,6 +12,7 @@ import (
 			"data/Elements (Little Alchemy 2) _ Little Alchemy Wiki _ Fandom.html",
 			"data/alchemy.csv",
 			"data/alchemy.db",
+			"data/tiers.json",
 		)
 		
 		if err != nil {

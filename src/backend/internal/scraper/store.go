@@ -3,6 +3,7 @@ package scraper
 import (
 	"database/sql"
 	"encoding/csv"
+	"encoding/json"
 	"fmt"
 	"little_alchemy_backend/internal/model"
 	"log"
@@ -14,13 +15,15 @@ import (
 // Constructor
 type DataStore struct{}
 
-// Simpan ke CSV
-func (ds *DataStore) SaveToCSV(recipes []*model.Recipe, path string) error {
-	
-	// Setup file CSV 
-	file, err := os.Create(path)
+type ElementTierMap map[string]int
+
+// Simpan recipes ke CSV
+func (ds *DataStore) SaveToCSV(recipes []*model.Recipe, csvPath string) error {
+
+	// Setup file CSV
+	file, err := os.Create(csvPath)
 	if err != nil {
-		log.Printf("Gagal membuat file %s: %v \n", path, err)
+		log.Printf("Gagal membuat file %s: %v \n", csvPath, err)
 		return err
 	}
 	defer file.Close()
@@ -42,14 +45,14 @@ func (ds *DataStore) SaveToCSV(recipes []*model.Recipe, path string) error {
 		// fmt.Println("Saved in CSV: ", r.Element)
 	}
 
-	fmt.Println("Data tersimpan di ", path)
+	fmt.Println("Data tersimpan di", csvPath)
 	return nil
 }
 
-// Simpan ke DB 
+// Simpan recipes ke DB
 func (ds *DataStore) SaveToDB(recipes []*model.Recipe, dbPath string) error {
-	
-	// Setup SQLite database 
+
+	// Setup SQLite database
 	db, err := sql.Open("sqlite", dbPath+"?_journal=OFF&_sync=OFF&_locking_mode=EXCLUSIVE")
 	if err != nil {
 		log.Printf("Gagal membuat file %s: %v \n", dbPath, err)
@@ -68,7 +71,7 @@ func (ds *DataStore) SaveToDB(recipes []*model.Recipe, dbPath string) error {
 		return err
 	}
 
-	// Hapus tabel lama 
+	// Hapus tabel lama
 	if _, err := db.Exec("DELETE FROM elements"); err != nil {
 		log.Printf("Gagal menghapus data lama: %v\n", err)
 		return err
@@ -87,6 +90,29 @@ func (ds *DataStore) SaveToDB(recipes []*model.Recipe, dbPath string) error {
 		// fmt.Println("Saved in SQLite Database: ", r.Element)
 	}
 
-	fmt.Println("Data tersimpan di ", dbPath)
+	fmt.Println("Data tersimpan di", dbPath)
+	return nil
+}
+
+// Simpan tiers ke json
+func (ds *DataStore) SaveMap(tiers ElementTierMap, jsonPath string) error {
+
+	// Setup file json
+	file, err := os.Create(jsonPath)
+	if err != nil {
+		log.Printf("Gagal membuat file %s: %v \n", jsonPath, err)
+		return err
+	}
+	defer file.Close()
+
+	// Tulis map sebagai json
+	encoder := json.NewEncoder(file)
+	encoder.SetIndent("", "  ") 
+	err = encoder.Encode(tiers)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("Data tersimpan di", jsonPath)
 	return nil
 }

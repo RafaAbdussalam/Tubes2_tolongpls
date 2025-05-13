@@ -1,29 +1,21 @@
 package main
 
 import (
-	"fmt"
-	"little_alchemy_backend/internal/model"
+	"little_alchemy_backend/internal/handler"
 	"little_alchemy_backend/internal/repo"
-	"little_alchemy_backend/internal/tree"
 	"log"
 )
 
 func main() {
-	repo, err := repo.NewRepository("data/alchemy.db", "data/alchemy.csv")
+
+	// Initialize repository
+	repo, err := repo.NewRepository("data/alchemy.db", "data/alchemy.csv", "data/tiers.json")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("failed to initialize repository")
 	}
 
-	builder, err := tree.NewBuilder(repo, model.BFS, 1)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	tree, err := builder.BuildTree("Mud")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Print(tree.String())
+	// Initialize router
+	router := handler.NewRouter(repo)
+	router.Run("0.0.0.0:8080")
 
 }

@@ -7,27 +7,21 @@ import (
 )
 
 type TreeBuilder interface {
-	BuildTree(rootElement string) (*model.RecipeTree, error)
+	BuildTree(rootElement string, amount int) (*model.RecipeTree, error)
 }
 
-func NewBuilder(repo *repo.RecipeRepository, traversal model.Traversal, amount int) (TreeBuilder, error) {
+func NewBuilder(repo *repo.RecipeRepository, traversal model.Traversal) (TreeBuilder, error) {
 	switch traversal {
+
+		// BFS
 		case model.BFS:
 			return &BFSBuilder{repo: *repo}, nil
-			// if amount > 1 {
-			// 	return &ParallelBuilder{
-			// 			base: &BFSBuilder{repo: repo},
-			// 			amount: amount,
-			// 	}
-			// }
+
+		// DFS
 		case model.DFS:
-			// if amount > 1 {
-			// 	return &ParallelBuilder{
-			// 			base: &DFSBuilder{repo: repo},
-			// 			amount: amount,
-			// 	}
-			// }
 			return &DFSBuilder{repo: *repo}, nil // nanti ganti ke DFS
+
+		// Invalid
 		default:
 			return nil, fmt.Errorf("mode tidak valid")
 	}

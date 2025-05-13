@@ -26,6 +26,7 @@ func isPrimary(element string) bool {
 		"Air":   true,
 		"Fire":  true,
 		"Water": true,
+		"Time":  true,
 	}
 	return primes[element]
 }

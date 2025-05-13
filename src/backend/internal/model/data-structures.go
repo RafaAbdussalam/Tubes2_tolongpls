@@ -1,54 +1,50 @@
 package model
 
+import "sync"
+
 // Queue
-type Queue [T any] []T
-
-func (q *Queue[T]) Push(x T) {
-	*q = append(*q, x)
-}
-
-func (q *Queue[T]) Pop() T {
-	item := (*q)[0]
-	*q = (*q)[1:]
-	return item
-}
-
-func (q *Queue[T]) Peek() T {
-	return (*q)[0]
-}
-
-func (q *Queue[T]) IsEmpty() bool {
-	return len(*q) == 0
+type Queue [T any] struct {
+	items []T
+	mu    sync.Mutex
 }
 
 func NewQueue[T any](initial ...T) *Queue[T] {
-	q := Queue[T](initial)
-	return &q
+	return &Queue[T]{
+		items: initial,
+	}
 }
 
-// Stack
-type Stack []interface{}
-
-func (s *Stack) Push(x interface{}) {
-	*s = append(*s, x)
+func (q *Queue[T]) Push(x T) {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+	q.items = append(q.items, x)
 }
 
-func (s *Stack) Pop() interface{} {
-	tempS := *s 
-	len := len(tempS) 
-	last := tempS[len-1] 
-	*s = tempS[:len-1] 
-	return last
+func (q *Queue[T]) Pop() (T) {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+	
+	var zero T
+	if len(q.items) == 0 {
+		return zero
+	}
+	
+	item := q.items[0]
+	q.items = q.items[1:]
+	return item 
 }
 
-func (s *Stack) Peek() interface{} {
-	return (*s)[0]
+func (q *Queue[T]) IsEmpty() bool {
+	q.mu.Lock()
+	defer q.mu.Unlock()
+	return len(q.items) == 0
 }
 
-func (s *Stack) IsEmpty() bool {
-	return len(*s) == 0
-}
-
-func NewStack(initial ...interface{}) *Stack {
-	return &Stack{initial}
+// Boolean to Integer
+func boolToInt(b bool) int {
+	var i int
+	if b {
+		i = 1
+	}
+	return i
 }

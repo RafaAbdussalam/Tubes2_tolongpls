@@ -1,0 +1,19 @@
+.recipe-tree-container {
+    width: auto;
+    height: 800px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+/* Style untuk node pasangan */
+.custom-node__pair {
+    color: midnightblue;
+}
+
+/* Style untuk elemen dasar */
+.custom-node__basic {
+    color: darkgreen;
+}
