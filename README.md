@@ -140,7 +140,7 @@ Berikut struktur dari aplikasi ini.
       <td>
         <img src="https://github.com/timoruslim.png" width="100" height="100"><br>
         <b>Timothy Niels Ruslim</b><br>
-        101
+        10123053
       </td>
       <td>
         <img src="https://github.com/RafaAbdussalam.png" width="100" height="100"><br>
